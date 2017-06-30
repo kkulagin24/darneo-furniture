@@ -1,0 +1,10 @@
+.page-header__btns  {
+  display: flex;
+
+  justify-content: center;
+  @include row-flex();
+  .btn {
+    @include col();
+    @include size(6);
+  }
+}

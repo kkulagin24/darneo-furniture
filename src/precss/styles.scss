@@ -1,2 +1,6 @@
 @import "lib/project", "lib/mixins", "lib/smart-grid";
-@import "lib/wrappers", "lib/_helpers.scss";
+@import "lib/helpers";
+@import "blocks/container";
+@import "blocks/header-top";
+@import "blocks/page-header";
+@import "blocks/btn";
