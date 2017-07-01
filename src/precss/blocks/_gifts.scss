@@ -1,0 +1,13 @@
+.gifts {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 653px;
+  width: 100%;
+  background-image: url("../img/gifts-left.png"),
+  url("../img/gifts-rigth.png");
+  background-position: left, right;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}

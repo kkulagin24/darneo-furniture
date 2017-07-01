@@ -323,6 +323,7 @@ img {
 }
 
 .action {
+  position: relative;
   background-image: url("../img/bg-action.png");
   background-position: -20px center;
   background-repeat: no-repeat;
@@ -789,6 +790,21 @@ img {
 
 .section-header span::before {
   left: -50px;
+}
+
+.gifts {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 653px;
+  width: 100%;
+  background-image: url("../img/gifts-left.png"), url("../img/gifts-rigth.png");
+  background-position: left, right;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 1170px) {
