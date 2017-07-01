@@ -21,6 +21,11 @@
       text-decoration: none;
       color: $c-blue;
       font-size: 14px;
+      transition-duration: $trdur;
+
+      &:hover {
+        color: $c-white;
+      }
     }
   }
 
@@ -66,5 +71,10 @@
   &__copy-link {
     color: $c-blue;
     text-decoration: none;
+    transition-duration: $trdur;
+
+    &:hover {
+      color: $c-white;
+    }
   }
 }

@@ -343,6 +343,11 @@ img {
   text-decoration: none;
   color: #14a0d4;
   font-size: 14px;
+  transition-duration: 0.3s;
+}
+
+.page-footer__menu-link:hover {
+  color: #ffffff;
 }
 
 .page-footer__contacts {
@@ -401,6 +406,11 @@ img {
 .page-footer__copy-link {
   color: #14a0d4;
   text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.page-footer__copy-link:hover {
+  color: #ffffff;
 }
 
 .main-menu {
@@ -422,6 +432,11 @@ img {
   color: #14a0d4;
   padding: 18px;
   text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.main-menu__link:hover {
+  color: #ffffff;
 }
 
 .main-menu__link:first-child {

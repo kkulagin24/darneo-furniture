@@ -12,6 +12,11 @@
     color: $c-blue;
     padding: 18px;
     text-decoration: none;
+    transition-duration: $trdur;
+
+    &:hover {
+      color: #ffffff;
+    }
 
     &:first-child {
       margin-left: -15px;
