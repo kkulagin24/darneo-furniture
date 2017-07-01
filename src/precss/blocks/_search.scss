@@ -1,0 +1,30 @@
+.search {
+  position: relative;
+  width: 300px;
+
+  &__input {
+    line-height: 1;
+    width: 100%;
+    padding-right: 60px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid $c-l-gray;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  &__submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 10px 14px;
+    border: 0;
+    background-color: #057da9;
+    border-radius: 3px;
+    color: $c-white;
+    font-size: 14px;
+    line-height: 1;
+    box-sizing: border-box;
+  }
+}

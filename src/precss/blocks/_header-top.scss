@@ -1,3 +1,96 @@
 .header-top {
-  display: flex;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  border-bottom: 1px solid $c-l-gray;
+  margin-bottom: 16px;
+
+  &__wrap {
+    display: flex;
+  }
+  &__logo {
+    text-align: center;
+    color: $c-blue;
+    margin-right: 70px;
+  }
+  &__company {
+    &-name {
+      font-size: 18px;
+    }
+    &-slogan {
+      font-size: 11px;
+      line-height: 1;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-self: flex-start;
+  }
+
+  &__works {
+    padding-left: 20px;
+    position: relative;
+    font-size: 14px;
+    color: #35353d;
+    line-height: 18px;
+    margin-bottom: 25px;
+
+    &::before {
+      content: "";
+      width: 3px;
+      height: 100%;
+      background-color: $c-orange;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+  }
+  &__search {
+    margin-right: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+
+  &__contacts {
+    span {
+      color: #cccccc;
+      margin: 20px;
+    }
+  }
+
+  &__call {
+    color: #35353d;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__link {
+    font-size: 18px;
+    font-family: "Open Sans";
+    color: #057da9;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  &__btn {
+    font-size: 14px;
+    color: #057da9;
+    text-align: center;
+    background-color: white;
+    border: 1px solid;
+    padding: 10px 35px;
+    line-height: 1;
+    border-radius: 3px;
+    margin-top: 12px;
+
+    &:first-of-type {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      color: #000000;
+    }
+  }
 }

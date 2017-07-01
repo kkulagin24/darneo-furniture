@@ -2,6 +2,13 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body,
@@ -134,9 +141,111 @@ img {
 }
 
 .header-top {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 16px;
+}
+
+.header-top__wrap {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.header-top__logo {
+  text-align: center;
+  color: #14a0d4;
+  margin-right: 70px;
+}
+
+.header-top__company-name {
+  font-size: 18px;
+}
+
+.header-top__company-slogan {
+  font-size: 11px;
+  line-height: 1;
+}
+
+.header-top__right {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.header-top__works {
+  padding-left: 20px;
+  position: relative;
+  font-size: 14px;
+  color: #35353d;
+  line-height: 18px;
+  margin-bottom: 25px;
+}
+
+.header-top__works::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: #ff9300;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.header-top__search {
+  margin-right: 35px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.header-top__contacts span {
+  color: #cccccc;
+  margin: 20px;
+}
+
+.header-top__call {
+  color: #35353d;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.header-top__link {
+  font-size: 18px;
+  font-family: "Open Sans";
+  color: #057da9;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-top__btn {
+  font-size: 14px;
+  color: #057da9;
+  text-align: center;
+  background-color: white;
+  border: 1px solid;
+  padding: 10px 35px;
+  line-height: 1;
+  border-radius: 3px;
+  margin-top: 12px;
+}
+
+.header-top__btn:first-of-type {
+  margin-right: 10px;
+}
+
+.header-top__btn:hover {
+  color: #000000;
 }
 
 .page-header__btns {
@@ -459,6 +568,37 @@ img {
   border-top-width: 0;
   border-left-color: transparent;
   border-right-color: transparent;
+}
+
+.search {
+  position: relative;
+  width: 300px;
+}
+
+.search__input {
+  line-height: 1;
+  width: 100%;
+  padding-right: 60px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.search__submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 10px 14px;
+  border: 0;
+  background-color: #057da9;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1170px) {
