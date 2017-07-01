@@ -3,6 +3,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -347,6 +348,7 @@ img {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+  position: relative;
 }
 
 .action__info {
@@ -805,11 +807,33 @@ img {
   transform: translateX(-50%);
   height: 653px;
   width: 100%;
-  background-image: url("../img/gifts-left.png"), url("../img/gifts-rigth.png");
-  background-position: left, right;
+  pointer-events: none;
+}
+
+.gifts::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/gifts-left.png");
+  background-position: center;
+  height: 100%;
+  width: 400px;
+  top: 0;
+  left: -250px;
   background-repeat: no-repeat;
   background-size: contain;
-  pointer-events: none;
+}
+
+.gifts::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/gifts-rigth.png");
+  background-position: center;
+  height: 100%;
+  width: 527px;
+  top: 0;
+  right: -340px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .advantages__wrap {
@@ -857,6 +881,25 @@ img {
 .advantages__item--projects::before {
   background-image: url("../img/icon-projects.png"), url("../img/bg-icon.png");
   background-position: center;
+}
+
+.slogan {
+  height: 590px;
+  background-image: url("../img/bg-promo.jpg");
+  background-position: center bottom;
+}
+
+.slogan__text {
+  font-weight: 900;
+  color: #35353d;
+  font-size: 80px;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.slogan__text span {
+  display: block;
+  font-size: 60px;
 }
 
 @media screen and (max-width: 1170px) {

@@ -13,6 +13,7 @@
     @include row-flex();
     padding: 100px 0;
     align-items: flex-start;
+    position: relative;
   }
 
   &__info {

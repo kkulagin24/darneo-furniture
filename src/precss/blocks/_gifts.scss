@@ -5,10 +5,29 @@
   transform: translateX(-50%);
   height: 653px;
   width: 100%;
-  background-image: url("../img/gifts-left.png"),
-  url("../img/gifts-rigth.png");
-  background-position: left, right;
-  background-repeat: no-repeat;
-  background-size: contain;
   pointer-events: none;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/gifts-left.png");
+    background-position: center;
+    height: 100%;
+    width: 400px;
+    top: 0;
+    left: -250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/gifts-rigth.png");
+    background-position: center;
+    height: 100%;
+    width: 527px;
+    top: 0;
+    right: -340px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
