@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: #35353d;
+  background-color: $c-bg-gray;
   padding-top: 80px;
   padding-bottom: 55px;
 
@@ -19,7 +19,7 @@
       @include size(6);
       margin-bottom: 20px;
       text-decoration: none;
-      color: #14a0d4;
+      color: $c-blue;
       font-size: 14px;
     }
   }
@@ -64,7 +64,7 @@
     text-align: right;
   }
   &__copy-link {
-    color: #14a0d4;
+    color: $c-blue;
     text-decoration: none;
   }
 }

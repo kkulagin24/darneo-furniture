@@ -1,0 +1,36 @@
+.main-menu {
+  display: flex;
+  background-color: $c-bg-gray;
+
+  &__wrap {
+    display: flex;
+    width: 1170px;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $c-blue;
+    padding: 18px;
+    text-decoration: none;
+
+    &:first-child {
+      margin-left: -15px;
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 7px solid white;
+        border-top-width: 0;
+        border-left-color: transparent;
+        border-right-color: transparent;
+      }
+    }
+  }
+}

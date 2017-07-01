@@ -1,5 +1,117 @@
+@import "http://fonts.fontstorage.com/import/opensans.css";
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img,
+abbr {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+legend {
+  color: #000;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -289,6 +401,49 @@ body {
 .page-footer__copy-link {
   color: #14a0d4;
   text-decoration: none;
+}
+
+.main-menu {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #35353d;
+}
+
+.main-menu__wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1170px;
+}
+
+.main-menu__link {
+  font-size: 14px;
+  color: #14a0d4;
+  padding: 18px;
+  text-decoration: none;
+}
+
+.main-menu__link:first-child {
+  margin-left: -15px;
+}
+
+.main-menu__link--active {
+  position: relative;
+}
+
+.main-menu__link--active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border: 7px solid white;
+  border-top-width: 0;
+  border-left-color: transparent;
+  border-right-color: transparent;
 }
 
 @media screen and (max-width: 1170px) {
