@@ -1,10 +1,35 @@
-.page-header__btns  {
-  display: flex;
+  .page-header {
+  padding-bottom: 190px;
+  background-image: url("../img/bg-header.jpg");
+  background-size: cover;
+  background-position: bottom center;
 
-  justify-content: center;
-  @include row-flex();
-  .btn {
-    @include col();
-    @include size(6);
+  &__promo {
+    margin-top: 90px;
+  }
+  &__btns {
+    justify-content: center;
+    display: flex;
+    @include row-flex();
+    .btn {
+      @include col();
+      @include size(6);
+    }
+  }
+
+  &__main-words {
+    font-size: 70px;
+    color: #057da9;
+    text-transform: uppercase;
+    line-height: 1.286;
+    font-weight: 900;
+    margin-bottom: 45px;
+
+    span {
+      color: #35353d;
+      font-size: 30px;
+      display: block;
+      font-weight: bold;
+    }
   }
 }

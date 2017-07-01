@@ -1,0 +1,26 @@
+.section-header {
+  font-size: 44px;
+  font-family: "Open Sans";
+  color: #057da9;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 900;
+  span {
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 55%;
+      transform: translateY(-50%);
+      height: 6px;
+      width: 40px;
+      background-color: currentColor;
+      right: -50px;
+    }
+
+    &::before {
+      left: -50px;
+    }
+  }
+}

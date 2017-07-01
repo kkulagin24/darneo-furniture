@@ -1,0 +1,38 @@
+.feed-back {
+  background-image: linear-gradient(141deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, .2));
+  border: 1px  solid white;
+  padding: 50px 65px;
+
+  &__headline {
+    font-size: 32px;
+    font-family: "Open Sans";
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1;
+
+    span {
+      text-transform: none;
+      line-height: 1;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 14px;
+    color: #35353d;
+    line-height: 1;
+    padding: 15px;
+    border: 0;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    width: 100%;
+    border: 1px solid #ff7e00;
+    padding: 14px;
+    line-height: 1;
+  }
+}

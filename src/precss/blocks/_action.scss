@@ -1,5 +1,41 @@
-.action__wrap {
-  display: flex;
 
-  padding: 100px 0;
+.action {
+  background-image: url("../img/bg-action.png");
+  background-position: -20px center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -30px;
+  margin-bottom: -30px;
+  position: relative;
+  z-index: 1;
+  &__wrap {
+    @include row-flex();
+    padding: 100px 0;
+    align-items: flex-start;
+  }
+
+  &__info {
+    @include col();
+    @include size(7);
+  }
+
+  &__form {
+    @include col();
+    @include size(5);
+  }
+
+  &__headline {
+    font-size: 100px;
+    font-family: "Open Sans";
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  &__promo {
+    font-size: 26px;
+  }
 }
