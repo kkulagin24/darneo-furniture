@@ -1,0 +1,28 @@
+.tabs {
+  &__headers {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__header {
+    font-size: 16px;
+    font-family: "Open Sans";
+    color: rgb(5, 125, 169);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #00a4e6;
+    border-radius: 0 3px 3px 0;
+    width: 390px;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+
+    &--active {
+      background-color: #00a4e6;
+      border-radius: 3px 0 0 3px;
+      color: white;
+    }
+  }
+}

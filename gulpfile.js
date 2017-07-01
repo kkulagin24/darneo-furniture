@@ -11,6 +11,7 @@ var config = {
 	dest: 'build/',
 	css: {
 		src: 'precss/**/*.scss',
+		style: 'precss/styles.scss',
 		dest: 'css'
 	},
 	html: {
@@ -49,7 +50,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('build', function() {
 
-  return gulp.src(config.src + config.css.src)
+  return gulp.src(config.src + config.css.style)
     .pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 5 versions'],
@@ -75,6 +76,11 @@ gulp.task('copyHtml', function() {
 
 
 gulp.task('watch', ['browserSync'], function() {
-	gulp.watch(config.src + config.css.src, ['build']);
+gulp.watch([config.src + config.css.src], function(event, cb) {
+    	setTimeout(function(){
+          gulp.start('build');
+    	}, 500);
+});
+	// gulp.watch(config.src + config.css.src, ['build']);
 	gulp.watch(config.src + config.html.src, ['copyHtml']);
 });
