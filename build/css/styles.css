@@ -239,6 +239,7 @@ img {
   line-height: 1;
   border-radius: 3px;
   margin-top: 12px;
+  cursor: pointer;
 }
 
 .header-top__btn:first-of-type {
@@ -312,6 +313,7 @@ img {
   font-size: 14px;
   font-weight: bold;
   line-height: 1;
+  cursor: pointer;
 }
 
 .btn--blue {
@@ -725,6 +727,7 @@ img {
   font-size: 14px;
   line-height: 1;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .arrow {
@@ -901,6 +904,10 @@ img {
   background-size: contain;
 }
 
+.advantages {
+  padding-top: 80px;
+}
+
 .advantages__wrap {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -966,6 +973,10 @@ img {
 .slogan__text span {
   display: block;
   font-size: 60px;
+}
+
+.work-scheme {
+  padding-top: 80px;
 }
 
 .scheme {
@@ -1324,6 +1335,7 @@ img {
   padding-right: 30px;
   width: 700px;
   margin-left: auto;
+  padding-top: 60px;
 }
 
 .workers__name {
