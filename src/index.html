@@ -143,16 +143,24 @@
         </div>
         <div class="services__wrap">
           <article class="service">
-            <img src="" alt="" class="tabs__img" width="245" height="245">
+            <div class="service__round" style="background-image: url('img/kitchen.jpg')">
+              <!--<img src="img/kitchen.jpg" alt="" class="service__img" alt="service">-->
+            </div>
+
             <h3 class="service__name">КУХНИ</h3>
-            <p class="sercvice__price">15% от стоимости, но не менее 1 тыс. руб.</p>
-            <button class="btn btn--orange">рассчитать стоимость</button>
+            <p class="service__price">15% от стоимости, но не менее 1 тыс. руб.</p>
+            <button class="btn btn--orange service__btn">рассчитать стоимость</button>
           </article>
           <article class="service">
-            <img src="" alt="" class="tabs__img" width="310" height="245">
+            <div class="service__round"  style="background-image: url('img/stuff.jpg')">
+              <!--<img src="img/stuff.jpg" alt="" class="service__img" alt="service" >-->
+              <div class="service__round service__round--small"  style="background-image: url('img/sofa.jpg')">
+                <!--<img src="img/sofa.jpg" alt="" class="service__img"alt="service">-->
+              </div>
+            </div>
             <h3 class="service__name">всё остальное</h3>
-            <p class="sercvice__price">10% от стоимости, но не менее 1 тыс. руб.</p>
-            <button class="btn btn--orange">рассчитать стоимость</button>
+            <p class="service__price">10% от стоимости, но не менее 1 тыс. руб.</p>
+            <button class="btn btn--orange service__btn">рассчитать стоимость</button>
           </article>
         </div>
       </div>
@@ -163,24 +171,24 @@
       <h2 class="section-header section-header--black"><span>выполненные работы</span></h2>
 
       <div class="pf-slider">
-        <div class="pf-slide">
-          <div class="pf-slide__img">
-            <img src="" alt="">
+
+        <div class="pf-slider__item">
+          <div class="pf-slider__img">
+            <img src="img/slide-folio.jpg" alt="">
           </div>
-          <div class="pf-slide__descr">
-            <h3 class="pf-slide__name">Кухня на заказ</h3>
-            <div class="pf-slide__text">
-              <p>Описание работы. Создавая интерьер, порой, не знаешь, за что же сразу браться. А иногда идея приходит как озарение, и ты представляешь себе картину целиком, совершенно не представляя себе способы воплощения своих фантазий в жизнь. Конечно же, главное в любом интерьере – это его безопасность для жизни и здоровья людей.</p>
-            </div>
+          <div class="pf-slider__descr">
+            <h3 class="pf-slider__name">Кухня на заказ</h3>
+            <div class="pf-slider__text">
+<p>Описание работы. Создавая интерьер, порой, не&nbsp;знаешь, за&nbsp;что&nbsp;же сразу браться. А&nbsp;иногда идея приходит как озарение, и&nbsp;ты&nbsp;представляешь себе картину целиком, совершенно не&nbsp;представляя себе способы воплощения своих фантазий в&nbsp;жизнь. Конечно&nbsp;же, главное в&nbsp;любом интерьере&nbsp;&mdash; это его безопасность для жизни и&nbsp;здоровья людей.</p>            </div>
           </div>
-          <div class="arrow arrow--left pf-slide__arrow">Стоимость сборки: <span>16 500 руб</span></div>
+          <div class="arrow arrow--left pf-slider__arrow">Стоимость сборки: <span>16 500 <span>руб</span></span></div>
         </div>
 
       </div>
       <div class="pf-slider__controls">
         <div class="pf-slider__dot"></div>
-        <div class="pf-slider__dot"></div>
         <div class="pf-slider__dot pf-slider__dot--active"></div>
+        <div class="pf-slider__dot"></div>
       </div>
       </div>
     </section>
@@ -207,18 +215,18 @@
       <h2 class="section-header section-header--black"><span>наши сборщики</span></h2>
       <div class="workers__slider">
         <div class="workers__slide">
-          <img src="" alt="">
+          <img src="img/worker.jpg" alt="">
           <div class="workers__descr">
             <h3 class="workers__name">
               <span class="workers__surname">Морозов</span><br>
               Александр Владимирович
             </h3>
-            <p><span>Опыт работы:</span> 6 лет</p>
+            <p class="workers__exp"><b>Опыт работы:</b> 6 лет</span>
             <div class="workers__text">
               <p>Создавая интерьер, порой, не знаешь, за что же сразу браться. А иногда идея приходит как озарение, и ты представляешь себе картину целиком, совершенно не представляя себе способы воплощения своих фантазий в жизнь.</p>
             </div>
+          <a href="#" class="btn btn--orange workers__btn">вызвать мастера</a>
           </div>
-          <a href="#" class="btn btn--orange">вызвать мастера</a>
         </div>
         <div class="workers__slider-controls">
           <div class="workers__slider-arrow workers__slider-arrow--prev"></div>

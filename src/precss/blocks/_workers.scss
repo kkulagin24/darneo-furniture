@@ -1,0 +1,94 @@
+.workers {
+  background-image: url("../img/bg-workers.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 92px;
+  padding-bottom: 62px;
+
+  &__slider {
+    border: 10px solid white;
+    background-color: white;
+    margin-top: 25px;
+  }
+
+  &__slide {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+    // padding-left: 30px;
+    width: 700px;
+    margin-left: auto;
+  }
+
+  &__name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  &__surname {
+    text-transform: uppercase;
+  }
+
+  &__exp {
+    margin-top: 30px;
+  }
+
+  &__text {
+    margin-top: 30px;
+  }
+
+  &__btn {
+    align-self: flex-start;
+    margin-top: 25px;
+    padding-left: 60px;
+    padding-right: 60px;
+    letter-spacing: 1px;
+  }
+
+  &__slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  &__slider-arrow {
+    background-color: #16a6dc;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 15px;
+    position: relative;
+    cursor: pointer;
+
+    &--next {
+      transform: rotate(180deg);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      width: 17px;
+      border-radius: 2px;
+      background-color: white;
+      top: 25px;
+      left: 15px;
+      transform-origin: top left;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+    &::after {
+      transform: rotate(45deg);
+      top: 22px;
+      left: 18px;
+    }
+  }
+}

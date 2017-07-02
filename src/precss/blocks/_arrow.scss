@@ -5,6 +5,7 @@
   line-height: 30px;
   padding: 12px;
   position: relative;
+  height: 84px;
 
   &::after {
     content: "";
@@ -26,6 +27,38 @@
       // width: 30px;
       top: 0;
       right: -30px;
+      // background-color: red;
+    }
+  }
+
+  &--left {
+    position: absolute;
+    bottom: 50px;
+    right: -17px;
+    font-size: 14px;
+    width: 420px;
+    text-transform: uppercase;
+
+    span {
+      font-size: 40px;
+      font-weight: bold;
+      display: block;
+      text-transform: none;
+
+      span {
+        font-size: 32px;
+        display: inline;
+      }
+    }
+
+    &::after {
+      border-width: 42px;
+      border-right-width: 30px;
+      border-left-width: 0;
+      border-right-color: #00a4e6;
+      // width: 30px;
+      top: 0;
+      left: -30px;
       // background-color: red;
     }
   }

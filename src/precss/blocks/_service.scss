@@ -1,4 +1,10 @@
 .service {
+  @include col();
+  @include size(6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &__name {
     font-size: 32px;
     font-family: "Open Sans";
@@ -7,14 +13,37 @@
     text-transform: uppercase;
     line-height: 1;
     text-align: center;
+    margin-top: 12px;
   }
 
   &__price {
-    font-size: 32px;
+    font-size: 18px;
     font-family: "Open Sans";
     color: rgb(53, 53, 61);
-    font-weight: bold;
     line-height: 1;
     text-align: center;
+    margin-top: 12px;
+  }
+
+  &__btn {
+    margin-top: 25px;
+  }
+
+  &__round {
+    width: 245px;
+    height: 245px;
+    border-radius: 50%;
+    border: 2px solid #e6e6e6;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+
+    &--small {
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      bottom: 12px;
+      left: -75px;
+    }
   }
 }
