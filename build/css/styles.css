@@ -403,10 +403,9 @@ img {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 100px;
-  height: 100px;
+  width: 115px;
+  height: 115px;
   margin: 1em;
-  border: 2px solid blue;
   border-radius: 50%;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -417,6 +416,20 @@ img {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  box-shadow: 0 0 5px white, inset 0 0 5px white;
+  border: 4px solid white;
+}
+
+.timer__num {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 35px;
+  color: #35353d;
+}
+
+.timer__units {
+  color: #35353d;
+  font-size: 14px;
 }
 
 .tabs__headers {
@@ -1301,9 +1314,9 @@ img {
 }
 
 .pf-slider__item {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   position: relative;
   background: white;
   border: 10px solid white;
@@ -1368,6 +1381,39 @@ img {
   cursor: default;
 }
 
+.slick-dots {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.slick-dots button {
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #ff9300;
+  margin: 0 7.5px;
+  cursor: pointer;
+  font-size: 0;
+  padding: 0;
+}
+
+.slick-active button {
+  height: 21px;
+  width: 21px;
+  background-image: linear-gradient(to top, #ff9300 66%, #ffb517);
+  border: 0;
+  box-shadow: inset 0 -2px 0 #ff6c00;
+  cursor: default;
+}
+
 .portfolio {
   background-size: cover;
   background-image: url("../img/bg-folio.jpg");
@@ -1390,9 +1436,9 @@ img {
 }
 
 .workers__slide {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -1486,6 +1532,53 @@ img {
 }
 
 .workers__slider-arrow::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 22px;
+  left: 18px;
+}
+
+.slick-arrow {
+  background-color: #16a6dc;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 15px;
+  position: relative;
+  cursor: pointer;
+  font-size: 0;
+  border: 0;
+}
+
+.slick-arrow.slick-next {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.slick-arrow::before,
+.slick-arrow::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 17px;
+  border-radius: 2px;
+  background-color: white;
+  top: 25px;
+  left: 15px;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+
+.slick-arrow::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.slick-arrow::after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
