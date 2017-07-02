@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мебель-Идеал</title>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/styles.css">
   <script src="https://use.fontawesome.com/18ad160cc7.js"></script>
   <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick/slick.min.js"></script>
   <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -144,30 +144,72 @@
           <div class="tabs__header tabs__header--active">Сборка мебели</div>
           <div class="tabs__header">сопутствующие услуги</div>
         </div>
-        <div class="services__wrap">
-          <article class="service">
-            <div class="service__round" style="background-image: url('img/kitchen.jpg')">
-              <!--<img src="img/kitchen.jpg" alt="" class="service__img" alt="service">-->
-            </div>
+<div class="tabs__content">
 
-            <h3 class="service__name">КУХНИ</h3>
-            <p class="service__price">15% от стоимости, но не менее 1 тыс. руб.</p>
-            <button class="btn btn--orange service__btn">рассчитать стоимость</button>
-          </article>
-          <article class="service">
-            <div class="service__round"  style="background-image: url('img/stuff.jpg')">
-              <!--<img src="img/stuff.jpg" alt="" class="service__img" alt="service" >-->
-              <div class="service__round service__round--small"  style="background-image: url('img/sofa.jpg')">
-                <!--<img src="img/sofa.jpg" alt="" class="service__img"alt="service">-->
+          <div class="services__wrap">
+            <article class="service">
+              <div class="service__round" style="background-image: url('img/kitchen.jpg')">
+                <!--<img src="img/kitchen.jpg" alt="" class="service__img" alt="service">-->
               </div>
-            </div>
-            <h3 class="service__name">всё остальное</h3>
-            <p class="service__price">10% от стоимости, но не менее 1 тыс. руб.</p>
-            <button class="btn btn--orange service__btn">рассчитать стоимость</button>
-          </article>
-        </div>
+
+              <h3 class="service__name">КУХНИ</h3>
+              <p class="service__price">15% от стоимости, но не менее 1 тыс. руб.</p>
+              <a class="btn btn--orange service__btn">рассчитать стоимость</a>
+            </article>
+            <article class="service">
+              <div class="service__round"  style="background-image: url('img/stuff.jpg')">
+                <!--<img src="img/stuff.jpg" alt="" class="service__img" alt="service" >-->
+                <div class="service__round service__round--small"  style="background-image: url('img/sofa.jpg')">
+                  <!--<img src="img/sofa.jpg" alt="" class="service__img"alt="service">-->
+                </div>
+              </div>
+              <h3 class="service__name">всё остальное</h3>
+              <p class="service__price">10% от стоимости, но не менее 1 тыс. руб.</p>
+              <a class="btn btn--orange service__btn">рассчитать стоимость</a>
+            </article>
+          </div>
+          <div class="services__wrap" style="filter: hue-rotate(180deg)">
+            <article class="service">
+              <div class="service__round" style="background-image: url('img/kitchen.jpg')">
+              </div>
+
+              <h3 class="service__name">КУХНИ</h3>
+              <p class="service__price">15% от стоимости, но не менее 1 тыс. руб.</p>
+              <a class="btn btn--orange service__btn">рассчитать стоимость</a>
+            </article>
+            <article class="service">
+              <div class="service__round"  style="background-image: url('img/stuff.jpg')">
+                <div class="service__round service__round--small"  style="background-image: url('img/sofa.jpg')">
+                </div>
+              </div>
+              <h3 class="service__name">всё остальное</h3>
+              <p class="service__price">10% от стоимости, но не менее 1 тыс. руб.</p>
+              <a class="btn btn--orange service__btn">рассчитать стоимость</a>
+            </article>
+          </div>
+
+</div>
       </div>
       </div>
+        <script>
+
+
+          $('.tabs__content').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.tabs__headers'
+          });
+          $('.tabs__headers').slick({
+            slidesToShow: 2,
+            slidesToScroll: 0,
+            asNavFor: '.tabs__content',
+            dots: false,
+            centerMode: false,
+            focusOnSelect: true
+          });
+        </script>
     </section>
     <section class="portfolio">
       <div class="container">
@@ -214,7 +256,7 @@
 
         </div>
       </div>
-             <script>
+        <script>
           $('.pf-slider').slick({
             infinite: false,
             slidesToShow: 1,

@@ -17,5 +17,6 @@
   &__wrap {
     @include row-flex();
     margin-top: 60px;
+    display: flex !important;
   }
 }

@@ -18,11 +18,24 @@
     width: 390px;
     text-decoration-line: underline;
     text-decoration-style: dotted;
+    cursor: pointer;
+
+    &:hover {
+      color: black;
+      text-decoration: none;
+    }
 
     &--active {
-      background-color: #00a4e6;
-      border-radius: 3px 0 0 3px;
-      color: white;
+      // background-color: #00a4e6;
+      // border-radius: 3px 0 0 3px;
+      // color: white;
     }
+  }
+  &__header.slick-current {
+    background-color: #00a4e6;
+    border-radius: 3px 0 0 3px;
+    color: white;
+    text-decoration: none;
+    cursor: default;
   }
 }
