@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мебель-Идеал</title>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/styles.css">
-  <title>Мебель-Идеал</title>
-
 <script src="https://use.fontawesome.com/18ad160cc7.js"></script>
 
 </head>
@@ -59,9 +58,10 @@
                   <p>
                   <a class="header-top__link" href="tel:+79167126511">+7 (916) 712-65-11</a> <span>или</span> <a class="header-top__link" href="mailto:info@mebelideal.ru">info@mebelideal.ru</a>
                   </p>
-                  <button class="header-top__btn"><i class="fa fa-phone"></i> Заказать обратный звонок</button>
-                  <button class="header-top__btn"><i class="fa fa-bell"></i>  Бесплатный вызов специалиста</button>
-
+                  <div class="header-top__btns">
+                    <button class="header-top__btn" data-popup="call-back"><i class="fa fa-phone"></i> Заказать обратный звонок</button>
+                    <button class="header-top__btn" data-popup="specialist"><i class="fa fa-bell"></i>  Бесплатный вызов специалиста</button>
+                  </div>
                 </section>
 
 </div>
@@ -366,6 +366,43 @@
       </div>
     </div>
   </footer>
+
+  <div class="overlay" id="call-back">
+    <form action="" class="feed-back feed-back--popup ">
+      <div class="feed-back__close"></div>
+
+      <header class="feed-back__headline">
+        закажите
+        <span>обратный звонок</span>
+      </header>
+      <input class="feed-back__input feed-back__input--border" type="text" placeholder="Ваше имя">
+      <input class="feed-back__input feed-back__input--border" type="text" placeholder="Номер телефона">
+      <button class="btn btn--orange feed-back__btn" type="submit">заказать звонок</button>
+
+    </form>
+  </div>
+
+  <div class="overlay" id="specialist" >
+    <form action="" class="feed-back feed-back--popup ">
+      <div class="feed-back__close"></div>
+      <header class="feed-back__headline">
+        бесплатный
+        <span>вызов специалиста</span>
+      </header>
+      <div class="feed-back__choise-wrap">
+          <div class="feed-back__choise">Мне нужен:</div>
+          <input class="feed-back__checkbox" type="checkbox" id="designer">
+          <label class="feed-back__label" for="designer">Дизайнер</label>
+          <input class="feed-back__checkbox" type="checkbox" id="worker">
+          <label class="feed-back__label" for="worker">Замерщик</label>
+      </div>
+      <input class="feed-back__input feed-back__input--border" type="text" placeholder="Ваше имя">
+      <input class="feed-back__input feed-back__input--border" type="text" placeholder="Номер телефона">
+      <input class="feed-back__input feed-back__input--border" type="text" placeholder="Адрес">
+      <button class="btn btn--orange feed-back__btn" type="submit">заказать звонок</button>
+    </form>
+  </div>
+<script src="js/main.js"></script>
 </body>
 
 </html>

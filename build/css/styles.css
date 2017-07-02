@@ -178,6 +178,12 @@ img {
   align-self: flex-start;
 }
 
+.header-top__btns {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .header-top__works {
   padding-left: 20px;
   position: relative;
@@ -798,6 +804,50 @@ img {
   padding: 50px 65px;
 }
 
+.feed-back--popup {
+  background: white;
+  width: 455px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.feed-back__close {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  border-radius: 50%;
+  background-color: #14a0d4;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.feed-back__close::before,
+.feed-back__close::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border-radius: 1px;
+}
+
+.feed-back__close::after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
 .feed-back__headline {
   font-size: 32px;
   font-family: "Open Sans";
@@ -809,8 +859,27 @@ img {
 }
 
 .feed-back__headline span {
-  text-transform: none;
   line-height: 1;
+  font-size: 22px;
+  display: block;
+}
+
+.feed-back__choise-wrap {
+  margin-bottom: 25px;
+}
+
+.feed-back__choise {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.feed-back__label {
+  font-size: 14px;
+  margin-left: 4px;
+  cursor: pointer;
+  line-height: 1.5;
+  margin-right: 20px;
 }
 
 .feed-back__input {
@@ -822,6 +891,10 @@ img {
   border: 0;
   border-radius: 3px;
   margin-bottom: 10px;
+}
+
+.feed-back__input--border {
+  border: 1px solid #cccccc;
 }
 
 .feed-back__btn {
@@ -1418,6 +1491,24 @@ img {
   transform: rotate(45deg);
   top: 22px;
   left: 18px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(53, 53, 61, 0.9);
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: .3s;
+}
+
+.overlay--show {
+  opacity: 1;
+  pointer-events: all;
 }
 
 @media screen and (max-width: 1170px) {
