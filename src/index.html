@@ -10,6 +10,7 @@
   <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
   <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -127,7 +128,7 @@
               <button class="btn btn--orange feed-back__btn" type="submit">отправить заявку</button>
 
           </form>
-      <div class="gifts"></div>
+      <div class="gifts"  data-stellar-ratio="1.4" data-stellar-vertical-offset="50" data-stellar-horizontal-offset="-40"></div>
         </div>
       </div>
     </section>
@@ -397,7 +398,7 @@
     </section>
      <section class="action">
       <div class="container">
-        <div class="action__wrap">
+        <div class="action__wrap" id="action2">
           <div class="action__info">
             <h2 class="action__headline">Акция!</h2>
             <div class="action__promo">Заполните форму и <b>получите скидку 20%</b> на&nbsp;сборку мебели в «МебельИдеал»</div>
@@ -432,8 +433,13 @@
               <button class="btn btn--orange feed-back__btn" type="submit">отправить заявку</button>
 
           </form>
-      <div class="gifts"></div>
+      <div class="gifts"  data-stellar-ratio="1.4" data-stellar-vertical-offset="70"></div>
         </div>
+        <script>
+           $(window).stellar({
+             horizontalScrolling: false
+           });
+        </script>
       </div>
     </section>
   </main>
