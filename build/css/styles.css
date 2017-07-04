@@ -4,6 +4,7 @@ body {
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
+  min-width: 1170px;
 }
 
 *,
@@ -139,6 +140,7 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  width: 1170px !important;
 }
 
 .header-top {
