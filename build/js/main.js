@@ -28,3 +28,7 @@ popupOpen.addEventListener('click', function(e) {
 
 
 jQuery(".jq-mask").mask("+7 (999) 999-9999");
+
+$(window).stellar({
+  horizontalScrolling: false
+});

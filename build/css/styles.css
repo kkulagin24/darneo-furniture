@@ -1432,6 +1432,10 @@ img {
   padding: 0;
 }
 
+.slick-dots button:hover {
+  border-color: #2293d7;
+}
+
 .slick-active button {
   height: 21px;
   width: 21px;
@@ -1576,6 +1580,10 @@ img {
   cursor: pointer;
   font-size: 0;
   border: 0;
+}
+
+.slick-arrow:hover {
+  background-color: #0362a5;
 }
 
 .slick-arrow.slick-next {

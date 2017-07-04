@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
   <script type="text/javascript" src="js/kinetic.js"></script>
   <script type="text/javascript" src="js/jquery.final-countdown.js"></script>
+  <script type="text/javascript" src="js/jquery.final-countdown2.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -140,8 +141,8 @@
             <header class="feed-back__headline">
               Узнайте <span>стоимость сборки</span>
             </header>
-            <input class="feed-back__input" type="text" placeholder="Ваше имя">
-            <input class="feed-back__input jq-mask" type="text" placeholder="Номер телефона">
+            <input class="feed-back__input" type="text" placeholder="Ваше имя" required>
+            <input class="feed-back__input jq-mask" type="text" placeholder="Номер телефона" required>
             <button class="btn btn--orange feed-back__btn" type="submit">отправить заявку</button>
 
           </form>
@@ -500,7 +501,7 @@
               });
             });
             $(document).ready(function() {
-              $('.timer--2').final_countdown({
+              $('.timer--2').final_countdown2({
                 start: Date.now() - 3600 * 24 * 7,
                 end: Date.now() + 3600 * 24 * 7,
                 now: Date.now(),
@@ -546,8 +547,8 @@
             <header class="feed-back__headline">
               Узнайте <span>стоимость сборки</span>
             </header>
-            <input class="feed-back__input" type="text" placeholder="Ваше имя">
-            <input class="feed-back__input jq-mask" type="text" placeholder="Номер телефона">
+            <input class="feed-back__input" type="text" placeholder="Ваше имя" required>
+            <input class="feed-back__input jq-mask" type="text" placeholder="Номер телефона" required>
             <button class="btn btn--orange feed-back__btn" type="submit">отправить заявку</button>
 
           </form>
@@ -555,11 +556,7 @@
         </div>
       </div>
     </section>
-        <script>
-          $(window).stellar({
-            horizontalScrolling: false
-          });
-        </script>
+
   </main>
   <footer class="page-footer">
     <div class="container">
@@ -614,8 +611,8 @@
         закажите
         <span>обратный звонок</span>
       </header>
-      <input class="feed-back__input feed-back__input--border" type="text" placeholder="Ваше имя">
-      <input class="feed-back__input feed-back__input--border jq-mask" type="text" placeholder="Номер телефона">
+      <input class="feed-back__input feed-back__input--border" type="text" placeholder="Ваше имя" required>
+      <input class="feed-back__input feed-back__input--border jq-mask" type="text" placeholder="Номер телефона" required>
       <button class="btn btn--orange feed-back__btn" type="submit">заказать звонок</button>
 
     </form>
@@ -635,9 +632,9 @@
         <input class="feed-back__checkbox" type="checkbox" id="worker">
         <label class="feed-back__label" for="worker">Замерщик</label>
       </div>
-      <input class="feed-back__input feed-back__input--border" type="text" placeholder="Ваше имя">
-      <input class="feed-back__input feed-back__input--border jq-mask" type="text" placeholder="Номер телефона">
-      <input class="feed-back__input feed-back__input--border" type="text" placeholder="Адрес">
+      <input class="feed-back__input feed-back__input--border" type="text" placeholder="Ваше имя" required>
+      <input class="feed-back__input feed-back__input--border jq-mask" type="text" placeholder="Номер телефона" required>
+      <input class="feed-back__input feed-back__input--border" type="text" placeholder="Адрес" required>
       <button class="btn btn--orange feed-back__btn" type="submit">заказать звонок</button>
     </form>
   </div>

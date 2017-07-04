@@ -78,6 +78,10 @@
     cursor: pointer;
     font-size: 0;
     padding: 0;
+
+    &:hover {
+      border-color: #2293d7;
+    }
   }
 }
 

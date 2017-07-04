@@ -105,6 +105,10 @@
   font-size: 0;
   border: 0;
 
+  &:hover {
+    background-color: #0362a5;
+  }
+
   &.slick-next {
     transform: rotate(180deg);
   }
