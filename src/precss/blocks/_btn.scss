@@ -16,8 +16,15 @@
   &--blue {
     background-color: #14a1d5;
     background-image: linear-gradient(to bottom, #1a93c0, #18a9df 13%, #139dd0);
+    &:hover {
+      background-image: linear-gradient(to bottom, #0d7dd0, #117aca);
+    }
   }
   &--orange {
     background-image: linear-gradient(to top, #ff9300 66%, #ffb517);
+
+    &:hover {
+      background-image: linear-gradient(to top, #ff6c00 66%, #ff7d0c);
+    }
   }
 }

@@ -11,7 +11,9 @@
   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick/slick.min.js"></script>
   <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
+  <script type="text/javascript" src="js/kinetic.js"></script>
+  <script type="text/javascript" src="js/jquery.final-countdown.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -29,53 +31,55 @@
       </div>
     </nav>
 
-      <div class="header-top">
-        <div class="container">
-          <div class="header-top__wrap">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top__wrap">
 
-              <div class="header-top__logo">
-                <img src="img/main-logo.png" width="75" height="77" alt="Логотип 'Мебель-Идеал'">
-                <div class="header-top__company">
-                <div class="header-top__company-name">
-                  МебельИдеал
-                </div>
-                <div class="header-top__company-slogan">
-                Лучшее качество
-                </div>
-                </div>
+          <div class="header-top__logo">
+            <img src="img/main-logo.png" width="75" height="77" alt="Логотип 'Мебель-Идеал'">
+            <div class="header-top__company">
+              <div class="header-top__company-name">
+                МебельИдеал
               </div>
-<div class="header-top__right">
-
-                <div class="header-top__search">
-                  <div class="header-top__works">
-                    Пн-Сб: с 9:00 до 19:00<br> Вс: с 9:00 до 17:00
-                  </div>
-                  <form action="" class="search">
-                    <input type="text" class="search__input" placeholder="Поиск по каталогу">
-                    <button type="submit" class="search__submit"><i class="fa fa-search"></i></button>
-                  </form>
-                </div>
-                <section class="header-top__contacts">
-                  <h2 class="visually-hidden">Контакты</h2>
-                  <p class="header-top__call">Позвоните нам:</p>
-
-                  <p>
-                  <a class="header-top__link" href="tel:+79167126511">+7 (916) 712-65-11</a> <span>или</span> <a class="header-top__link" href="mailto:info@mebelideal.ru">info@mebelideal.ru</a>
-                  </p>
-                  <div class="header-top__btns">
-                    <button class="header-top__btn" data-popup="call-back"><i class="fa fa-phone"></i> Заказать обратный звонок</button>
-                    <button class="header-top__btn" data-popup="specialist"><i class="fa fa-bell"></i>  Бесплатный вызов специалиста</button>
-                  </div>
-                </section>
-
-</div>
+              <div class="header-top__company-slogan">
+                Лучшее качество
+              </div>
+            </div>
           </div>
+          <div class="header-top__right">
 
+            <div class="header-top__search">
+              <div class="header-top__works">
+                Пн-Сб: с 9:00 до 19:00
+                <br> Вс: с 9:00 до 17:00
+              </div>
+              <form action="" class="search">
+                <input type="text" class="search__input" placeholder="Поиск по каталогу">
+                <button type="submit" class="search__submit"><i class="fa fa-search"></i>
+                </button>
+              </form>
+            </div>
+            <section class="header-top__contacts">
+              <h2 class="visually-hidden">Контакты</h2>
+              <p class="header-top__call">Позвоните нам:</p>
 
+              <p>
+                <a class="header-top__link" href="tel:+79167126511">+7 (916) 712-65-11</a> <span>или</span> <a class="header-top__link" href="mailto:info@mebelideal.ru">info@mebelideal.ru</a>
+              </p>
+              <div class="header-top__btns">
+                <button class="header-top__btn" data-popup="call-back"><i class="fa fa-phone"></i> Заказать обратный звонок</button>
+                <button class="header-top__btn" data-popup="specialist"><i class="fa fa-bell"></i> Бесплатный вызов специалиста</button>
+              </div>
+            </section>
+
+          </div>
         </div>
-      </div>
 
-<div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
       <div class="page-header__btns">
         <a href="#" class="btn btn--orange btn--cart"><i class="fa fa-shopping-cart"></i>
 интернет-магазин</a>
@@ -83,134 +87,146 @@
 сборка мебели</a>
       </div>
       <section class="page-header__promo">
-        <p class="page-header__main-words">СОБЕРЁМ МЕБЕЛЬ<br>
-        «ПОД ВАС»
+        <p class="page-header__main-words">СОБЕРЁМ МЕБЕЛЬ
+          <br> «ПОД ВАС»
           <span>АККУРАТНО И ПО ПРИЕМЛЕМОЙ ЦЕНЕ</span>
         </p>
         <div class="arrow arrow--right">Вот уже 15 лет мы профессионально приносим комфорт и практичность в Ваш дом!</div>
       </section>
 
-</div>
+    </div>
   </header>
   <main class="main-content">
-        <section class="action">
+    <section class="action">
       <div class="container">
         <div class="action__wrap">
           <div class="action__info">
             <h2 class="action__headline">Акция!</h2>
             <div class="action__promo">Заполните форму и <b>получите скидку 20%</b> на&nbsp;сборку мебели в «МебельИдеал»</div>
-            <div class="timer">
-              <div class="timer__counter">
-                <div class="timer__num">7</div>
-                <div class="timer__units">дней</div>
+            <div class="timer timer--1 clock">
+              <div class="timer__wrap">
+                <div id="canvas-days" class="clock-canvas timer__canvas"></div>
+                <div class="timer__counter clock-item clock-days countdown-time-value">
+                  <div class="timer__num val">0</div>
+                  <div class="timer__units type-days type-time">дней</div>
+                </div>
               </div>
-              <div class="timer__counter">
-                <div class="timer__num">11</div>
-                <div class="timer__units">часов</div>
+              <div class="timer__wrap">
+                <div id="canvas-hours" class="clock-canvas timer__canvas"></div>
+                <div class="timer__counter clock-item clock-hours countdown-time-value">
+                  <div class="timer__num val">0</div>
+                  <div class="timer__units type-hours type-time">часов</div>
+                </div>
               </div>
-              <div class="timer__counter">
-                <div class="timer__num">59</div>
-                <div class="timer__units">минут</div>
+              <div class="timer__wrap">
+                <div id="canvas-minutes" class="clock-canvas timer__canvas"></div>
+                <div class="timer__counter clock-item clock-minutes countdown-time-value">
+                  <div class="timer__num val">0</div>
+                  <div class="timer__units type-minutes type-time">минут</div>
+                </div>
               </div>
-              <div class="timer__counter">
-                <div class="timer__num">35</div>
-                <div class="timer__units">секунд</div>
+              <div class="timer__wrap">
+                <div id="canvas-seconds" class="clock-canvas clock-canvas--seconds timer__canvas"></div>
+                <div class="timer__counter clock-item clock-seconds countdown-time-value">
+                  <div class="timer__num val">0</div>
+                  <div class="timer__units type-seconds type-time">секунд</div>
+                </div>
               </div>
             </div>
           </div>
+
           <form action="" class="feed-back action__form">
 
-              <header class="feed-back__headline">
-                Узнайте <span>стоимость сборки</span>
-              </header>
-              <input class="feed-back__input" type="text" placeholder="Ваше имя">
-              <input class="feed-back__input jq-mask" type="text" placeholder="Номер телефона">
-              <button class="btn btn--orange feed-back__btn" type="submit">отправить заявку</button>
+            <header class="feed-back__headline">
+              Узнайте <span>стоимость сборки</span>
+            </header>
+            <input class="feed-back__input" type="text" placeholder="Ваше имя">
+            <input class="feed-back__input jq-mask" type="text" placeholder="Номер телефона">
+            <button class="btn btn--orange feed-back__btn" type="submit">отправить заявку</button>
 
           </form>
-      <div class="gifts"  data-stellar-ratio="1.4" data-stellar-vertical-offset="50" data-stellar-horizontal-offset="-40"></div>
+          <div class="gifts" data-stellar-ratio="1.4" data-stellar-vertical-offset="50" data-stellar-horizontal-offset="-40"></div>
         </div>
       </div>
     </section>
     <section class="services">
-<div class="container">
-      <h2 class="section-header">
+      <div class="container">
+        <h2 class="section-header">
         <span>Наши услуги</span>
         </h2>
-      <p class="services__promo">
-        <b>Не оставляем мусора после работы</b> и осуществляем<br>вывоз всего лишнего!
-      </p>
-      <div class="tabs">
-        <div class="tabs__headers">
-          <div class="tabs__header tabs__header--active">Сборка мебели</div>
-          <div class="tabs__header">сопутствующие услуги</div>
+        <p class="services__promo">
+          <b>Не оставляем мусора после работы</b> и осуществляем
+          <br>вывоз всего лишнего!
+        </p>
+        <div class="tabs">
+          <div class="tabs__headers">
+            <div class="tabs__header tabs__header--active">Сборка мебели</div>
+            <div class="tabs__header">сопутствующие услуги</div>
+          </div>
+          <div class="tabs__content">
+
+            <div class="services__wrap">
+              <article class="service">
+                <div class="service__round" style="background-image: url('img/kitchen.jpg')">
+                  <!--<img src="img/kitchen.jpg" alt="" class="service__img" alt="service">-->
+                </div>
+
+                <h3 class="service__name">КУХНИ</h3>
+                <p class="service__price">15% от стоимости, но не менее 1 тыс. руб.</p>
+                <a class="btn btn--orange service__btn">рассчитать стоимость</a>
+              </article>
+              <article class="service">
+                <div class="service__round" style="background-image: url('img/stuff.jpg')">
+                  <!--<img src="img/stuff.jpg" alt="" class="service__img" alt="service" >-->
+                  <div class="service__round service__round--small" style="background-image: url('img/sofa.jpg')">
+                    <!--<img src="img/sofa.jpg" alt="" class="service__img"alt="service">-->
+                  </div>
+                </div>
+                <h3 class="service__name">всё остальное</h3>
+                <p class="service__price">10% от стоимости, но не менее 1 тыс. руб.</p>
+                <a class="btn btn--orange service__btn">рассчитать стоимость</a>
+              </article>
+            </div>
+            <div class="services__wrap" style="filter: hue-rotate(180deg)">
+              <article class="service">
+                <div class="service__round" style="background-image: url('img/kitchen.jpg')">
+                </div>
+
+                <h3 class="service__name">КУХНИ</h3>
+                <p class="service__price">15% от стоимости, но не менее 1 тыс. руб.</p>
+                <a class="btn btn--orange service__btn">рассчитать стоимость</a>
+              </article>
+              <article class="service">
+                <div class="service__round" style="background-image: url('img/stuff.jpg')">
+                  <div class="service__round service__round--small" style="background-image: url('img/sofa.jpg')">
+                  </div>
+                </div>
+                <h3 class="service__name">всё остальное</h3>
+                <p class="service__price">10% от стоимости, но не менее 1 тыс. руб.</p>
+                <a class="btn btn--orange service__btn">рассчитать стоимость</a>
+              </article>
+            </div>
+
+          </div>
         </div>
-<div class="tabs__content">
-
-          <div class="services__wrap">
-            <article class="service">
-              <div class="service__round" style="background-image: url('img/kitchen.jpg')">
-                <!--<img src="img/kitchen.jpg" alt="" class="service__img" alt="service">-->
-              </div>
-
-              <h3 class="service__name">КУХНИ</h3>
-              <p class="service__price">15% от стоимости, но не менее 1 тыс. руб.</p>
-              <a class="btn btn--orange service__btn">рассчитать стоимость</a>
-            </article>
-            <article class="service">
-              <div class="service__round"  style="background-image: url('img/stuff.jpg')">
-                <!--<img src="img/stuff.jpg" alt="" class="service__img" alt="service" >-->
-                <div class="service__round service__round--small"  style="background-image: url('img/sofa.jpg')">
-                  <!--<img src="img/sofa.jpg" alt="" class="service__img"alt="service">-->
-                </div>
-              </div>
-              <h3 class="service__name">всё остальное</h3>
-              <p class="service__price">10% от стоимости, но не менее 1 тыс. руб.</p>
-              <a class="btn btn--orange service__btn">рассчитать стоимость</a>
-            </article>
-          </div>
-          <div class="services__wrap" style="filter: hue-rotate(180deg)">
-            <article class="service">
-              <div class="service__round" style="background-image: url('img/kitchen.jpg')">
-              </div>
-
-              <h3 class="service__name">КУХНИ</h3>
-              <p class="service__price">15% от стоимости, но не менее 1 тыс. руб.</p>
-              <a class="btn btn--orange service__btn">рассчитать стоимость</a>
-            </article>
-            <article class="service">
-              <div class="service__round"  style="background-image: url('img/stuff.jpg')">
-                <div class="service__round service__round--small"  style="background-image: url('img/sofa.jpg')">
-                </div>
-              </div>
-              <h3 class="service__name">всё остальное</h3>
-              <p class="service__price">10% от стоимости, но не менее 1 тыс. руб.</p>
-              <a class="btn btn--orange service__btn">рассчитать стоимость</a>
-            </article>
-          </div>
-
-</div>
       </div>
-      </div>
-        <script>
-
-
-          $('.tabs__content').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.tabs__headers'
-          });
-          $('.tabs__headers').slick({
-            slidesToShow: 2,
-            slidesToScroll: 0,
-            asNavFor: '.tabs__content',
-            dots: false,
-            centerMode: false,
-            focusOnSelect: true
-          });
-        </script>
+      <script>
+        $('.tabs__content').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: '.tabs__headers'
+        });
+        $('.tabs__headers').slick({
+          slidesToShow: 2,
+          slidesToScroll: 0,
+          asNavFor: '.tabs__content',
+          dots: false,
+          centerMode: false,
+          focusOnSelect: true
+        });
+      </script>
     </section>
     <section class="portfolio">
       <div class="container">
@@ -225,9 +241,11 @@
             <div class="pf-slider__descr">
               <h3 class="pf-slider__name">Кухня на заказ</h3>
               <div class="pf-slider__text">
-                <p>Описание работы. Создавая интерьер, порой, не&nbsp;знаешь, за&nbsp;что&nbsp;же сразу браться. А&nbsp;иногда идея приходит как озарение, и&nbsp;ты&nbsp;представляешь себе картину целиком, совершенно не&nbsp;представляя себе способы воплощения своих фантазий в&nbsp;жизнь. Конечно&nbsp;же, главное в&nbsp;любом интерьере&nbsp;&mdash; это его безопасность для жизни и&nbsp;здоровья людей.</p>            </div>
+                <p>Описание работы. Создавая интерьер, порой, не&nbsp;знаешь, за&nbsp;что&nbsp;же сразу браться. А&nbsp;иногда идея приходит как озарение, и&nbsp;ты&nbsp;представляешь себе картину целиком, совершенно не&nbsp;представляя себе способы воплощения своих фантазий в&nbsp;жизнь. Конечно&nbsp;же, главное в&nbsp;любом интерьере&nbsp;&mdash; это его безопасность для жизни и&nbsp;здоровья людей.</p>
+              </div>
             </div>
-            <div class="arrow arrow--left pf-slider__arrow">Стоимость сборки: <span>16 500 <span>руб</span></span></div>
+            <div class="arrow arrow--left pf-slider__arrow">Стоимость сборки: <span>16 500 <span>руб</span></span>
+            </div>
           </div>
           <div class="pf-slider__item" style="filter: hue-rotate(240deg)">
             <div class="pf-slider__img">
@@ -236,9 +254,11 @@
             <div class="pf-slider__descr">
               <h3 class="pf-slider__name">Кухня на заказ</h3>
               <div class="pf-slider__text">
-                <p>Описание работы. Создавая интерьер, порой, не&nbsp;знаешь, за&nbsp;что&nbsp;же сразу браться. А&nbsp;иногда идея приходит как озарение, и&nbsp;ты&nbsp;представляешь себе картину целиком, совершенно не&nbsp;представляя себе способы воплощения своих фантазий в&nbsp;жизнь. Конечно&nbsp;же, главное в&nbsp;любом интерьере&nbsp;&mdash; это его безопасность для жизни и&nbsp;здоровья людей.</p>            </div>
+                <p>Описание работы. Создавая интерьер, порой, не&nbsp;знаешь, за&nbsp;что&nbsp;же сразу браться. А&nbsp;иногда идея приходит как озарение, и&nbsp;ты&nbsp;представляешь себе картину целиком, совершенно не&nbsp;представляя себе способы воплощения своих фантазий в&nbsp;жизнь. Конечно&nbsp;же, главное в&nbsp;любом интерьере&nbsp;&mdash; это его безопасность для жизни и&nbsp;здоровья людей.</p>
+              </div>
             </div>
-            <div class="arrow arrow--left pf-slider__arrow">Стоимость сборки: <span>16 500 <span>руб</span></span></div>
+            <div class="arrow arrow--left pf-slider__arrow">Стоимость сборки: <span>16 500 <span>руб</span></span>
+            </div>
           </div>
           <div class="pf-slider__item" style="filter: hue-rotate(120deg)">
             <div class="pf-slider__img">
@@ -247,9 +267,11 @@
             <div class="pf-slider__descr">
               <h3 class="pf-slider__name">Кухня на заказ</h3>
               <div class="pf-slider__text">
-                <p>Описание работы. Создавая интерьер, порой, не&nbsp;знаешь, за&nbsp;что&nbsp;же сразу браться. А&nbsp;иногда идея приходит как озарение, и&nbsp;ты&nbsp;представляешь себе картину целиком, совершенно не&nbsp;представляя себе способы воплощения своих фантазий в&nbsp;жизнь. Конечно&nbsp;же, главное в&nbsp;любом интерьере&nbsp;&mdash; это его безопасность для жизни и&nbsp;здоровья людей.</p>            </div>
+                <p>Описание работы. Создавая интерьер, порой, не&nbsp;знаешь, за&nbsp;что&nbsp;же сразу браться. А&nbsp;иногда идея приходит как озарение, и&nbsp;ты&nbsp;представляешь себе картину целиком, совершенно не&nbsp;представляя себе способы воплощения своих фантазий в&nbsp;жизнь. Конечно&nbsp;же, главное в&nbsp;любом интерьере&nbsp;&mdash; это его безопасность для жизни и&nbsp;здоровья людей.</p>
+              </div>
             </div>
-            <div class="arrow arrow--left pf-slider__arrow">Стоимость сборки: <span>16 500 <span>руб</span></span></div>
+            <div class="arrow arrow--left pf-slider__arrow">Стоимость сборки: <span>16 500 <span>руб</span></span>
+            </div>
           </div>
 
         </div>
@@ -257,33 +279,33 @@
 
         </div>
       </div>
-        <script>
-          $('.pf-slider').slick({
-            infinite: false,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true,
-            appendDots: '.pf-slider__controls'
-          });
-        </script>
+      <script>
+        $('.pf-slider').slick({
+          infinite: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          appendDots: '.pf-slider__controls'
+        });
+      </script>
     </section>
     <section class="advantages">
       <div class="container">
-      <h2 class="section-header">
+        <h2 class="section-header">
         <span>преимущества</span>
       </h2>
-      <div class="advantages__wrap">
-        <div class="advantages__item advantages__item--talk">
-          Слушаем и советуем, а&nbsp;не&nbsp;просто выполняем
+        <div class="advantages__wrap">
+          <div class="advantages__item advantages__item--talk">
+            Слушаем и советуем, а&nbsp;не&nbsp;просто выполняем
+          </div>
+          <div class="advantages__item advantages__item--warranty">
+            Даём 1 год гарантии на&nbsp;материалы
+          </div>
+          <div class="advantages__item advantages__item--projects">
+            Умеем реализовывать сложные проекты
+          </div>
         </div>
-        <div class="advantages__item advantages__item--warranty">
-          Даём 1 год гарантии на&nbsp;материалы
-        </div>
-        <div class="advantages__item advantages__item--projects">
-          Умеем реализовывать сложные проекты
-        </div>
-      </div>
       </div>
     </section>
     <section class="workers">
@@ -298,10 +320,10 @@
                 Александр Владимирович
               </h3>
               <p class="workers__exp"><b>Опыт работы:</b> 6 лет</span>
-              <div class="workers__text">
-                <p>Создавая интерьер, порой, не знаешь, за что же сразу браться. А иногда идея приходит как озарение, и ты представляешь себе картину целиком, совершенно не представляя себе способы воплощения своих фантазий в жизнь.</p>
-              </div>
-              <a href="#" class="btn btn--orange workers__btn">вызвать мастера</a>
+                <div class="workers__text">
+                  <p>Создавая интерьер, порой, не знаешь, за что же сразу браться. А иногда идея приходит как озарение, и ты представляешь себе картину целиком, совершенно не представляя себе способы воплощения своих фантазий в жизнь.</p>
+                </div>
+                <a href="#" class="btn btn--orange workers__btn">вызвать мастера</a>
             </div>
           </div>
           <div class="workers__slide" style="filter: hue-rotate(120deg)">
@@ -312,10 +334,10 @@
                 Александр Владимирович
               </h3>
               <p class="workers__exp"><b>Опыт работы:</b> 6 лет</span>
-              <div class="workers__text">
-                <p>Создавая интерьер, порой, не знаешь, за что же сразу браться. А иногда идея приходит как озарение, и ты представляешь себе картину целиком, совершенно не представляя себе способы воплощения своих фантазий в жизнь.</p>
-              </div>
-              <a href="#" class="btn btn--orange workers__btn">вызвать мастера</a>
+                <div class="workers__text">
+                  <p>Создавая интерьер, порой, не знаешь, за что же сразу браться. А иногда идея приходит как озарение, и ты представляешь себе картину целиком, совершенно не представляя себе способы воплощения своих фантазий в жизнь.</p>
+                </div>
+                <a href="#" class="btn btn--orange workers__btn">вызвать мастера</a>
             </div>
           </div>
           <div class="workers__slide" style="filter: hue-rotate(240deg)">
@@ -326,10 +348,10 @@
                 Александр Владимирович
               </h3>
               <p class="workers__exp"><b>Опыт работы:</b> 6 лет</span>
-              <div class="workers__text">
-                <p>Создавая интерьер, порой, не знаешь, за что же сразу браться. А иногда идея приходит как озарение, и ты представляешь себе картину целиком, совершенно не представляя себе способы воплощения своих фантазий в жизнь.</p>
-              </div>
-              <a href="#" class="btn btn--orange workers__btn">вызвать мастера</a>
+                <div class="workers__text">
+                  <p>Создавая интерьер, порой, не знаешь, за что же сразу браться. А иногда идея приходит как озарение, и ты представляешь себе картину целиком, совершенно не представляя себе способы воплощения своих фантазий в жизнь.</p>
+                </div>
+                <a href="#" class="btn btn--orange workers__btn">вызвать мастера</a>
             </div>
           </div>
 
@@ -339,109 +361,205 @@
 
         </div>
       </div>
-        <script>
-          $('.workers__slider').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            appendArrows: '.workers__slider-controls'
-          });
-        </script>
+      <script>
+        $('.workers__slider').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          appendArrows: '.workers__slider-controls'
+        });
+      </script>
     </section>
     <section class="work-scheme">
       <div class="container">
-      <h2 class="section-header"><span>схема работы</span></h2>
-      <div class="scheme">
-        <div class="scheme__item scheme__item--you">
-          <div class="scheme__icon scheme__icon--you"></div>
-          <div class="scheme__text scheme__text--you"><b>Вы</b></div>
+        <h2 class="section-header"><span>схема работы</span></h2>
+        <div class="scheme">
+          <div class="scheme__item scheme__item--you">
+            <div class="scheme__icon scheme__icon--you"></div>
+            <div class="scheme__text scheme__text--you"><b>Вы</b>
+            </div>
+          </div>
+          <div class="scheme__item scheme__item--mail">
+            <div class="scheme__icon scheme__icon--mail"></div>
+            <div class="scheme__text scheme__text--mail scheme__text--cnt">Свяжитесь с намилюбым удобным способом</div>
+          </div>
+          <div class="scheme__item scheme__item--measure">
+            <div class="scheme__icon scheme__icon--measure"></div>
+            <div class="scheme__text scheme__text--measure scheme__text--cnt">Мы сделаем замеры и&nbsp;поможем&nbsp;подобрать материалы</div>
+          </div>
+          <div class="scheme__item scheme__item--project">
+            <div class="scheme__icon scheme__icon--project"></div>
+            <div class="scheme__text scheme__text--project scheme__text--cnt">Подготовим проект и&nbsp;согласуем комфортную для Вас стоимость</div>
+          </div>
+          <div class="scheme__item scheme__item--build">
+            <div class="scheme__icon scheme__icon--build"></div>
+            <div class="scheme__text scheme__text--build scheme__text--cnt">Осуществим сборку</div>
+          </div>
+          <div class="scheme__item scheme__item--acts">
+            <div class="scheme__icon scheme__icon--acts"></div>
+            <div class="scheme__text scheme__text--acts scheme__text--cnt">Сдадим работы по&nbsp;пунктам договора, подпишем акты</div>
+          </div>
+          <div class="scheme__item scheme__item--clean">
+            <div class="scheme__icon scheme__icon--clean"></div>
+            <div class="scheme__text scheme__text--clean scheme__text--cnt">Уберём и&nbsp;вывезем остатки&nbsp;мусора</div>
+          </div>
+          <div class="scheme__item scheme__item--discount">
+            <div class="scheme__icon scheme__icon--discount"></div>
+            <div class="scheme__text scheme__text--discount scheme__text--cnt">Дадим скидку на&nbsp;следующий&nbsp;заказ</div>
+          </div>
         </div>
-        <div class="scheme__item scheme__item--mail">
-          <div class="scheme__icon scheme__icon--mail"></div>
-          <div class="scheme__text scheme__text--mail scheme__text--cnt">Свяжитесь с намилюбым удобным способом</div>
-        </div>
-        <div class="scheme__item scheme__item--measure">
-          <div class="scheme__icon scheme__icon--measure"></div>
-          <div class="scheme__text scheme__text--measure scheme__text--cnt">Мы сделаем замеры и&nbsp;поможем&nbsp;подобрать материалы</div>
-        </div>
-        <div class="scheme__item scheme__item--project">
-          <div class="scheme__icon scheme__icon--project"></div>
-          <div class="scheme__text scheme__text--project scheme__text--cnt">Подготовим проект и&nbsp;согласуем комфортную для Вас стоимость</div>
-        </div>
-        <div class="scheme__item scheme__item--build">
-          <div class="scheme__icon scheme__icon--build"></div>
-          <div class="scheme__text scheme__text--build scheme__text--cnt">Осуществим сборку</div>
-        </div>
-        <div class="scheme__item scheme__item--acts">
-          <div class="scheme__icon scheme__icon--acts"></div>
-          <div class="scheme__text scheme__text--acts scheme__text--cnt">Сдадим работы по&nbsp;пунктам договора, подпишем акты</div>
-        </div>
-        <div class="scheme__item scheme__item--clean">
-          <div class="scheme__icon scheme__icon--clean"></div>
-          <div class="scheme__text scheme__text--clean scheme__text--cnt">Уберём и&nbsp;вывезем остатки&nbsp;мусора</div>
-        </div>
-        <div class="scheme__item scheme__item--discount">
-          <div class="scheme__icon scheme__icon--discount"></div>
-          <div class="scheme__text scheme__text--discount scheme__text--cnt">Дадим скидку на&nbsp;следующий&nbsp;заказ</div>
-        </div>
-      </div>
       </div>
     </section>
     <section class="slogan">
       <div class="container">
-      <p class="slogan__text">
-        мы ценим вас
-        <span>и ваше время</span>
-      </p>
+        <p class="slogan__text">
+          мы ценим вас
+          <span>и ваше время</span>
+        </p>
       </div>
     </section>
-     <section class="action">
+   <section class="action">
       <div class="container">
-        <div class="action__wrap" id="action2">
+        <div class="action__wrap">
           <div class="action__info">
             <h2 class="action__headline">Акция!</h2>
             <div class="action__promo">Заполните форму и <b>получите скидку 20%</b> на&nbsp;сборку мебели в «МебельИдеал»</div>
-            <div class="timer">
-              <div class="timer__counter clock-days">
-                <div class="timer__num">7</div>
-                <div class="timer__units">дней</div>
+
+            <div class="timer timer--2 clock">
+              <div class="timer__wrap">
+                <div id="canvas-days-2" class="clock-canvas clock-canvas--days timer__canvas"></div>
+                <div class="timer__counter clock-item clock-days countdown-time-value">
+                  <div class="timer__num val">0</div>
+                  <div class="timer__units type-days type-time">дней</div>
+                </div>
               </div>
-              <div class="timer__counter clock-hours">
-                <div class="timer__num">11</div>
-                <div class="timer__units">часов</div>
+              <div class="timer__wrap">
+                <div id="canvas-hours-2" class="clock-canvas clock-canvas--hours timer__canvas"></div>
+                <div class="timer__counter clock-item clock-hours countdown-time-value">
+                  <div class="timer__num val">0</div>
+                  <div class="timer__units type-hours type-time">часов</div>
+                </div>
               </div>
-              <div class="timer__counter clock-minutes">
-                <div class="timer__num">59</div>
-                <div class="timer__units">минут</div>
+              <div class="timer__wrap">
+                <div id="canvas-minutes-2" class="clock-canvas clock-canvas--seconds--minutes timer__canvas"></div>
+                <div class="timer__counter clock-item clock-minutes countdown-time-value">
+                  <div class="timer__num val">0</div>
+                  <div class="timer__units type-minutes type-time">минут</div>
+                </div>
               </div>
-              <div class="timer__counter clock-seconds">
-                <div class="timer__num val">35</div>
-                <div class="timer__units type-seconds">секунд</div>
+              <div class="timer__wrap">
+                <div id="canvas-seconds-2" class="clock-canvas clock-canvas--seconds timer__canvas"></div>
+                <div class="timer__counter clock-item clock-seconds countdown-time-value">
+                  <div class="timer__num val">0</div>
+                  <div class="timer__units type-seconds type-time">секунд</div>
+                </div>
               </div>
             </div>
-
-
           </div>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $('.timer--1').final_countdown({
+                start: Date.now() - 3600 * 24 * 7,
+                end: Date.now() + 3600 * 24 * 7,
+                now: Date.now(),
+                selectors: {
+
+                      value_seconds: '.timer--1 .clock-seconds .val',
+
+                      canvas_seconds: 'canvas-seconds',
+
+                      value_minutes: '.timer--1 .clock-minutes .val',
+
+                      canvas_minutes: 'canvas-minutes',
+
+                      value_hours: '.timer--1 .clock-hours .val',
+
+                      canvas_hours: 'canvas-hours',
+
+                      value_days: '.timer--1 .clock-days .val',
+
+                      canvas_days: 'canvas-days'
+                },
+                seconds: {
+                  borderColor: '#01a5e6',
+                  borderWidth: '4'
+                },
+                minutes: {
+                  borderColor: '#01a5e6',
+                  borderWidth: '4'
+                },
+                hours: {
+                  borderColor: '#01a5e6',
+                  borderWidth: '4'
+                },
+                days: {
+                  borderColor: '#01a5e6',
+                  borderWidth: '4'
+                }
+              });
+            });
+            $(document).ready(function() {
+              $('.timer--2').final_countdown({
+                start: Date.now() - 3600 * 24 * 7,
+                end: Date.now() + 3600 * 24 * 7,
+                now: Date.now(),
+                selectors: {
+
+                      value_seconds: '.timer--2 .clock-seconds .val',
+
+                      canvas_seconds: 'canvas-seconds-2',
+
+                      value_minutes: '.timer--2 .clock-minutes .val',
+
+                      canvas_minutes: 'canvas-minutes-2',
+
+                      value_hours: '.timer--2 .clock-hours .val',
+
+                      canvas_hours: 'canvas-hours-2',
+
+                      value_days: '.timer--2 .clock-days .val',
+
+                      canvas_days: 'canvas-days-2'
+                },
+                seconds: {
+                  borderColor: '#01a5e6',
+                  borderWidth: '4'
+                },
+                minutes: {
+                  borderColor: '#01a5e6',
+                  borderWidth: '4'
+                },
+                hours: {
+                  borderColor: '#01a5e6',
+                  borderWidth: '4'
+                },
+                days: {
+                  borderColor: '#01a5e6',
+                  borderWidth: '4'
+                }
+              });
+            });
+          </script>
           <form action="" class="feed-back action__form">
 
-              <header class="feed-back__headline">
-                Узнайте <span>стоимость сборки</span>
-              </header>
-              <input class="feed-back__input" type="text" placeholder="Ваше имя">
-              <input class="feed-back__input jq-mask" type="text" placeholder="Номер телефона">
-              <button class="btn btn--orange feed-back__btn" type="submit">отправить заявку</button>
+            <header class="feed-back__headline">
+              Узнайте <span>стоимость сборки</span>
+            </header>
+            <input class="feed-back__input" type="text" placeholder="Ваше имя">
+            <input class="feed-back__input jq-mask" type="text" placeholder="Номер телефона">
+            <button class="btn btn--orange feed-back__btn" type="submit">отправить заявку</button>
 
           </form>
-      <div class="gifts"  data-stellar-ratio="1.4" data-stellar-vertical-offset="70"></div>
+          <div class="gifts" data-stellar-ratio="1.4" data-stellar-vertical-offset="50" data-stellar-horizontal-offset="-40"></div>
         </div>
-        <script>
-           $(window).stellar({
-             horizontalScrolling: false
-           });
-        </script>
       </div>
     </section>
+        <script>
+          $(window).stellar({
+            horizontalScrolling: false
+          });
+        </script>
   </main>
   <footer class="page-footer">
     <div class="container">
@@ -473,8 +591,8 @@
           </a>
         </div>
         <div class="page-footer__contacts">
-          <span class="page-footer__contact-type"><i class="fa fa-map-marker"></i> Наш адрес:</span> город Москва, Варшавское шоссе д.134<br>
-          (переезд магазина в новый ТЦ). Павильон номер 12, 3-й этаж.
+          <span class="page-footer__contact-type"><i class="fa fa-map-marker"></i> Наш адрес:</span> город Москва, Варшавское шоссе д.134
+          <br> (переезд магазина в новый ТЦ). Павильон номер 12, 3-й этаж.
 
           <a href="tel:+79167126511"><span class="page-footer__contact-type"><i class="fa fa-phone"></i> Телефон:</span> +7 (916) 712 - 65 - 11</a>
         </div>
@@ -503,7 +621,7 @@
     </form>
   </div>
 
-  <div class="overlay" id="specialist" >
+  <div class="overlay" id="specialist">
     <form action="" class="feed-back feed-back--popup ">
       <div class="feed-back__close"></div>
       <header class="feed-back__headline">
@@ -511,11 +629,11 @@
         <span>вызов специалиста</span>
       </header>
       <div class="feed-back__choise-wrap">
-          <div class="feed-back__choise">Мне нужен:</div>
-          <input class="feed-back__checkbox" type="checkbox" id="designer">
-          <label class="feed-back__label" for="designer">Дизайнер</label>
-          <input class="feed-back__checkbox" type="checkbox" id="worker">
-          <label class="feed-back__label" for="worker">Замерщик</label>
+        <div class="feed-back__choise">Мне нужен:</div>
+        <input class="feed-back__checkbox" type="checkbox" id="designer">
+        <label class="feed-back__label" for="designer">Дизайнер</label>
+        <input class="feed-back__checkbox" type="checkbox" id="worker">
+        <label class="feed-back__label" for="worker">Замерщик</label>
       </div>
       <input class="feed-back__input feed-back__input--border" type="text" placeholder="Ваше имя">
       <input class="feed-back__input feed-back__input--border jq-mask" type="text" placeholder="Номер телефона">
@@ -523,7 +641,7 @@
       <button class="btn btn--orange feed-back__btn" type="submit">заказать звонок</button>
     </form>
   </div>
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

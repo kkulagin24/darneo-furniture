@@ -80,9 +80,9 @@
 <script type="text/javascript">
  $(document).ready(function() {
 $('.countdown').final_countdown({
-start: '1362139200',
-end: '1388461320',
-now: '1387461319',
+start: Date.now() - 3600 * 24 * 7,
+end: Date.now() + 3600 * 24 * 7 ,
+now: Date.now(),
 
 seconds: {
     borderColor: '#01a5e6',
