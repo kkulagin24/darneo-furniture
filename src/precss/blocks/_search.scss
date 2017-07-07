@@ -2,6 +2,10 @@
   position: relative;
   width: 300px;
 
+  @include lg-block() {
+    width: 212px;
+  }
+
   &__input {
     line-height: 1;
     width: 100%;

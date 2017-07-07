@@ -2,7 +2,6 @@ body {
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
-  min-width: 1170px;
 }
 
 *,
@@ -22,4 +21,12 @@ body {
   height: 1px !important;
   padding: 0 !important;
   border: 0 !important;
+}
+
+
+.lg-hidden {
+  display: none;
+  @include lg-block() {
+    display: block;
+  }
 }

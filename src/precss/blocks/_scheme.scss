@@ -15,7 +15,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 976px;
+    width: calc(100% - 138px);
     height: 252px;
     border: 3px dotted #15a4d9;
     border-radius: 126px;
@@ -31,6 +31,7 @@
       width: 17px;
       border-left: 2px solid #15a4d9;
       border-top: 2px solid #15a4d9;
+      z-index: 2;
     }
 
     &--you {
@@ -40,7 +41,7 @@
 
       &::before {
         bottom: -11px;
-        left: 89px;
+        left: 76px;
         transform: rotate(13deg) skew(5deg);
       }
     }
@@ -52,14 +53,16 @@
 
       &::before {
         top: -10px;
-        left: 25px;
+        left: 38px;
         transform: rotate(192deg);
       }
     }
 
     &--mail {
       top: 60px;
-      left: 204px;
+      left: 27%;
+      transform: translateX(-50%);
+
 
       &::before {
         top: 45%;
@@ -70,7 +73,9 @@
 
     &--measure {
       top: 60px;
-      left: 494px;
+      left: 50%;
+      transform: translateX(-50%);
+
 
       &::before {
         top: 45%;
@@ -81,7 +86,9 @@
 
     &--project {
       top: 60px;
-      left: 786px;
+      right: 27%;
+      transform: translateX(50%);
+
 
       &::before {
         top: 45%;
@@ -92,7 +99,8 @@
 
     &--discount {
       bottom: 60px;
-      left: 204px;
+      left: 27%;
+      transform: translateX(-50%);
 
       &::before {
         right: -17px;
@@ -103,7 +111,9 @@
 
     &--clean {
       bottom: 60px;
-      left: 494px;
+      left: 50%;
+      transform: translateX(-50%);
+
 
       &::before {
         right: -17px;
@@ -114,7 +124,9 @@
 
     &--acts {
       bottom: 60px;
-      left: 786px;
+      right: 27%;
+      transform: translateX(50%);
+
 
       &::before {
         right: -17px;
@@ -193,16 +205,33 @@
     font-size: 16px;
     width: 225%;
 
+    @include lg-block() {
+      font-size: 15px;
+      width: 165%;
+    }
+
     &--mail {
       top: -60px;
+
+      @include lg-block() {
+        top: -75px;
+      }
     }
     &--measure {
       // width: 210%;
       top: -60px;
+
+      @include lg-block() {
+        top: -75px;
+      }
     }
     &--project {
       // width: 200%;
       top: -60px;
+
+      @include lg-block() {
+        top: -75px;
+      }
     }
 
     &--you {

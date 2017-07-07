@@ -18,12 +18,16 @@
 
   &__info {
     @include col();
-    @include size(7);
+    @include size(6);
   }
 
   &__form {
     @include col();
     @include size(5);
+
+    @include lg-block() {
+      @include size(6);
+    }
   }
 
   &__headline {

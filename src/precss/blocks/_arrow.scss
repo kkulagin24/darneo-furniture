@@ -16,8 +16,15 @@
   }
 
   &--right {
-    width: 555px;
+    @include col();
+    margin-left: 0;
+    margin-right: 0;
+    @include size(6);
     font-style: italic;
+
+    @include lg-block() {
+      @include size(7);
+    }
 
     &::after {
       border-width: 42px;
@@ -34,10 +41,14 @@
   &--left {
     position: absolute;
     bottom: 50px;
-    right: -17px;
+    right: -7px;
     font-size: 14px;
-    width: 420px;
+    width: 405px;
     text-transform: uppercase;
+
+    @include lg-block() {
+      width: 340px;
+    }
 
     span {
       font-size: 40px;

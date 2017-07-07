@@ -1,5 +1,6 @@
 .timer {
   display: flex;
+  @include row-flex();
 
   &__counter {
     display: flex;
@@ -12,6 +13,11 @@
     align-items: center;
     box-shadow: 0 0 5px white, inset 0 0 5px white;
     border: 4px solid white;
+
+    @include lg-block() {
+      width: 92px;
+      height: 92px;
+    }
   }
 
   &__num {
@@ -28,7 +34,8 @@
 
   &__wrap {
     position: relative;
-    margin: 1em;
+    @include col();
+    @include size(3);
   }
 
   &__canvas {

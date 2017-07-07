@@ -14,13 +14,16 @@
   &__slide {
     display: flex !important;
     align-items: flex-start;
+    img {
+      @include size(5);
+    }
   }
 
   &__descr {
     display: flex;
     flex-direction: column;
     padding-right: 30px;
-    width: 700px;
+    @include size(7)
     margin-left: auto;
     padding-top: 60px;
   }
