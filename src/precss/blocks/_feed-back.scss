@@ -3,6 +3,14 @@
   border: 1px  solid white;
   padding: 50px 65px;
 
+  @include md-block() {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 33px;
+  }
+
   &--popup {
     background: white;
     width: 455px;
@@ -50,10 +58,20 @@
     margin-bottom: 20px;
     line-height: 1;
 
+
+    @include md-block() {
+      width: 100%;
+      text-align: left;
+      font-size: 22px;
+    }
+
     span {
       line-height: 1;
       font-size: 22px;
       display: block;
+      @include md-block() {
+        display: inline;
+      }
     }
   }
 
@@ -84,6 +102,12 @@
     border: 0;
     border-radius: 3px;
     margin-bottom: 10px;
+    @include md-block() {
+      width: 30%;
+      margin-right: 10px;
+      flex-grow: 1;
+      margin-bottom: 0;
+    }
 
     &--border {
       border: 1px solid #cccccc;
@@ -95,5 +119,11 @@
     border: 1px solid #ff7e00;
     padding: 14px;
     line-height: 1;
+
+    @include md-block() {
+      width: 30%;
+      padding: 14px 0;
+      flex-grow: 1;
+    }
   }
 }

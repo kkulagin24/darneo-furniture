@@ -6,28 +6,48 @@
   height: 653px;
   width: 100%;
   pointer-events: none;
+
+  @include md-block() {
+    height: 510px;
+  }
+
   &::before {
     content: "";
     position: absolute;
     background-image: url("../img/gifts-left.png");
     background-position: center;
     height: 100%;
-    width: 400px;
+    max-width: 440px;
+    height: 100%;
     top: 0;
-    left: -250px;
+    left: 0;
     background-repeat: no-repeat;
-    background-size: contain;
+    // background-size: cover;
+    background-position: right;
+    right: calc(50% + 350px);
+    @include md-block() {
+      background-size: 344px;
+      right: calc(50% + 250px);
+    }
   }
   &::after {
     content: "";
     position: absolute;
     background-image: url("../img/gifts-rigth.png");
-    background-position: center;
+    background-position: left;
     height: 100%;
-    width: 527px;
+    max-width: 527px;
     top: 0;
     right: -340px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    @include md-block() {
+      max-width: 411px;
+      top: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-size: 527px;
+      left: calc(50% + 260px);
+    }
   }
 }

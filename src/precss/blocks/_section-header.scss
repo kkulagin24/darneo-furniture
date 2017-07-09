@@ -27,4 +27,8 @@
   &--black {
     color: black;
   }
+
+  @include md-block() {
+    font-size: 40px;
+  }
 }

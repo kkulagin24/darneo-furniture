@@ -6,6 +6,10 @@
     width: 212px;
   }
 
+  @include md-block() {
+    width: 345px;
+  }
+
   &__input {
     line-height: 1;
     width: 100%;

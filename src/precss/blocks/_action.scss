@@ -9,16 +9,23 @@
   margin-bottom: -30px;
   position: relative;
   z-index: 1;
+
   &__wrap {
     @include row-flex();
     padding: 100px 0;
     align-items: flex-start;
-    position: relative;
   }
 
   &__info {
     @include col();
     @include size(6);
+    @include md-block() {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 155px;
+      width: 100%;
+    }
   }
 
   &__form {
@@ -26,10 +33,11 @@
     @include size(5);
 
     @include lg-block() {
-      @include size(6);
+      @include lg-block() {
+        @include size(6);
+      }
     }
   }
-
   &__headline {
     font-size: 100px;
     font-family: "Open Sans";
@@ -39,9 +47,20 @@
     font-weight: 900;
     line-height: 1;
     margin-bottom: 20px;
+
+    @include md-block() {
+      font-size: 54px;
+    }
   }
 
   &__promo {
     font-size: 26px;
+    @include lg-block() {
+      font-size: 22px;
+    }
+    @include md-block() {
+      font-size: 16px;
+      width: 250px;
+    }
   }
 }

@@ -14,6 +14,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @include md-block() {
+      @include size(6);
+    }
+
     &-link {
       width: 49%;
       margin-bottom: 20px;
@@ -34,6 +38,9 @@
     color: #ffffff;
     font-size: 14px;
     line-height: 1.5;
+    @include md-block() {
+      @include size(6);
+    }
 
     a {
       margin-top: 30px;
@@ -53,6 +60,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include md-block() {
+      @include size(12);
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 30px;
+    }
   }
 
   &__btn {
@@ -62,11 +76,19 @@
     border: 1px solid #9a9a9e;
     text-decoration: none;
     font-size: 14px;
+    @include md-block() {
+      padding-right: 60px;
+      padding-left: 60px;
+    }
   }
   &__copyright {
     font-size: 13px;
     color: rgb(255, 255, 255);
     text-align: right;
+
+    @include md-block() {
+      margin-left: 82px;
+    }
   }
   &__copy-link {
     color: $c-blue;

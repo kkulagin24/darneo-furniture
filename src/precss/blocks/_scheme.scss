@@ -9,6 +9,11 @@
   margin-top: 50px;
   margin-bottom: 80px;
 
+  @include md-block() {
+    height: 730px;
+    margin-bottom: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -19,6 +24,10 @@
     height: 252px;
     border: 3px dotted #15a4d9;
     border-radius: 126px;
+    @include md-block() {
+      width: 300px;
+      height: 580px;
+    }
   }
 
   &__item {
@@ -39,22 +48,45 @@
       transform: translateY(-50%);
       left: 7px;
 
+      @include md-block() {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 7px;
+      }
+
       &::before {
         bottom: -11px;
         left: 76px;
         transform: rotate(13deg) skew(5deg);
+        @include md-block() {
+          bottom: 44px;
+          left: -13px;
+          transform: rotate(121deg) skew(5deg);
+        }
       }
     }
 
     &--build {
-      top: 50%;
-      transform: translateY(-50%);
+      bottom: 50%;
+      transform: translateY(50%);
       right: 7px;
+
+      @include md-block() {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 7px;
+        top: none;
+      }
 
       &::before {
         top: -10px;
         left: 38px;
         transform: rotate(192deg);
+        @include md-block() {
+          top: 43px;
+          left: 128px;
+          transform: rotate(292deg);
+        }
       }
     }
 
@@ -63,11 +95,22 @@
       left: 27%;
       transform: translateX(-50%);
 
+      @include md-block() {
+        left: 508px;
+        top: 125px;
+      }
+
+
 
       &::before {
         top: 45%;
         left: -20px;
         transform: rotate(135deg)  skew(5deg);
+        @include md-block() {
+          top: -11px;
+          left: 29px;
+          transform: rotate(197deg) skew(5deg);
+        }
       }
     }
 
@@ -76,11 +119,22 @@
       left: 50%;
       transform: translateX(-50%);
 
+      @include md-block() {
+        left: 508px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
 
       &::before {
         top: 45%;
         left: -20px;
         transform: rotate(135deg)  skew(5deg);
+        @include md-block() {
+          top: -19px;
+          left: 56px;
+          transform: rotate(224deg) skew(5deg);
+        }
       }
     }
 
@@ -89,11 +143,22 @@
       right: 27%;
       transform: translateX(50%);
 
+      @include md-block() {
+        top: 480px;
+        right: 212px;
+      }
+
 
       &::before {
         top: 45%;
         left: -20px;
         transform: rotate(135deg)  skew(5deg);
+
+        @include md-block() {
+          top: -19px;
+          left: 56px;
+          transform: rotate(224deg) skew(5deg);
+        }
       }
     }
 
@@ -101,11 +166,21 @@
       bottom: 60px;
       left: 27%;
       transform: translateX(-50%);
+      @include md-block() {
+        bottom: 483px;
+        left: 212px;
+      }
+
 
       &::before {
         right: -17px;
         top: 43%;
         transform: rotate(-45deg) skew(5deg);
+        @include md-block() {
+          right: 56px;
+          top: 135px;
+          transform: rotate(45deg) skew(5deg);
+        }
       }
     }
 
@@ -114,11 +189,20 @@
       left: 50%;
       transform: translateX(-50%);
 
-
+      @include md-block() {
+        left: 212px;
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+      }
       &::before {
         right: -17px;
         top: 43%;
         transform: rotate(-45deg) skew(5deg);
+        @include md-block() {
+          right: 56px;
+          top: 135px;
+          transform: rotate(45deg) skew(5deg);
+        }
       }
     }
 
@@ -127,11 +211,19 @@
       right: 27%;
       transform: translateX(50%);
 
-
+      @include md-block() {
+        bottom: 117px;
+        right: 508px;
+      }
       &::before {
         right: -17px;
         top: 43%;
         transform: rotate(-45deg) skew(5deg);
+        @include md-block() {
+          right: 24px;
+          top: 122px;
+          transform: rotate(10deg) skew(5deg);
+        }
       }
     }
   }
@@ -210,6 +302,14 @@
       width: 165%;
     }
 
+    @include md-block() {
+      font-size: 14px;
+      width: 120%;
+      text-align: left;
+      top: 40px;
+      transform: none;
+    }
+
     &--mail {
       top: -60px;
 
@@ -236,6 +336,31 @@
 
     &--you {
       width: auto;
+      @include md-block() {
+        top: -30px;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+    }
+    &--build {
+      @include md-block() {
+        top: 140px;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+    }
+
+    &--measure,
+    &--mail,
+    &--project {
+      left: 130px;
+      // transform: none;
+    }
+
+    &--clean,
+    &--discount,
+    &--acts {
+      left: -155px;
     }
 
     &--cnt {
