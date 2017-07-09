@@ -10,6 +10,10 @@
     width: 345px;
   }
 
+  @include sm-block() {
+    width: 450px;
+  }
+
   &__input {
     line-height: 1;
     width: 100%;

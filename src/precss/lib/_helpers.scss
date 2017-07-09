@@ -30,3 +30,9 @@ body {
     display: block;
   }
 }
+
+.md-hidden {
+  @include sm-block() {
+    display: none;
+  }
+}

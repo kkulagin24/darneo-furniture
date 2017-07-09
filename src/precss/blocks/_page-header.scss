@@ -4,6 +4,20 @@
   background-size: cover;
   background-position: bottom center;
 
+  &__wrap {
+    position: static;
+
+    @include sm-block() {
+      position: fixed;
+      min-height: 100vh;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background-color: white;
+      z-index: 10;
+    }
+  }
+
   &__promo {
     margin-top: 90px;
   }
@@ -11,6 +25,7 @@
     justify-content: center;
     display: flex;
     @include row-flex();
+
     .btn {
       @include col();
       @include size(6);

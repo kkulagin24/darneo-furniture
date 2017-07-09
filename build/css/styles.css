@@ -272,6 +272,10 @@ img {
   background-position: bottom center;
 }
 
+.page-header__wrap {
+  position: static;
+}
+
 .page-header__promo {
   margin-top: 90px;
 }
@@ -2169,6 +2173,10 @@ img {
 }
 
 @media screen and (max-width: 750px) {
+  .md-hidden {
+    display: none;
+  }
+
   .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -2176,6 +2184,36 @@ img {
 
   .container {
     width: 480px;
+  }
+
+  .header-top__btns {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .header-top__search {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .header-top__btn {
+    width: 100%;
+  }
+
+  .page-header__wrap {
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+  }
+
+  .search {
+    width: 450px;
   }
 }
 
