@@ -1,6 +1,6 @@
 .header-top {
   padding-bottom: 25px;
-  padding-top: 25px;
+  padding-top: 35px;
   border-bottom: 1px solid $c-l-gray;
   margin-bottom: 16px;
 
@@ -93,10 +93,12 @@
     color: #35353d;
     font-weight: bold;
     font-size: 18px;
+    line-height: 13px;
+    margin-bottom: 4px;
   }
 
   &__link {
-    font-size: 18px;
+    font-size: 24px;
     font-family: "Open Sans";
     color: #057da9;
     font-weight: bold;
@@ -109,7 +111,7 @@
     text-align: center;
     background-color: white;
     border: 1px solid;
-    padding: 10px;
+    height: 35px;
     width: 300px;
     line-height: 1;
     border-radius: 3px;

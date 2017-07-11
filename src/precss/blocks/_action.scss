@@ -6,14 +6,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -30px;
-  margin-bottom: -30px;
-  position: relative;
+  margin-bottom: 80px;
   z-index: 1;
 
   &__wrap {
     @include row-flex();
     padding: 100px 0;
     align-items: flex-start;
+    justify-content: space-between;
   }
 
   &__info {
@@ -31,6 +31,7 @@
   &__form {
     @include col();
     @include size(5);
+    margin: 0;
 
     @include lg-block() {
       @include lg-block() {
@@ -38,10 +39,11 @@
       }
     }
   }
+
   &__headline {
     font-size: 100px;
-    font-family: "Open Sans";
-    color: white;
+    font-family: 'Open Sans';
+    color: #fff;
     text-transform: uppercase;
     text-align: left;
     font-weight: 900;
@@ -55,6 +57,7 @@
 
   &__promo {
     font-size: 26px;
+    margin-bottom: 20px;
     @include lg-block() {
       font-size: 22px;
     }

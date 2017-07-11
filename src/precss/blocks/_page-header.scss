@@ -29,6 +29,8 @@
     .btn {
       @include col();
       @include size(6);
+      height: 55px;
+      line-height: 25px;
     }
   }
 

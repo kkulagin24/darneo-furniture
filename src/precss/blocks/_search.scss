@@ -17,13 +17,15 @@
   &__input {
     line-height: 1;
     width: 100%;
-    padding-right: 60px;
-    padding: 10px;
+    height: 35px;
+    padding: 0 60px 0 10px;
     border-radius: 3px;
     border: 1px solid $c-l-gray;
     box-sizing: border-box;
     font-size: 14px;
   }
+
+  @include placeholder-color(search__input, #ccc);
 
   &__submit {
     position: absolute;

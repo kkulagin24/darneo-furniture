@@ -36,9 +36,9 @@
     background-image: url("../img/gifts-rigth.png");
     background-position: left;
     height: 100%;
-    max-width: 527px;
+    width: 527px;
     top: 0;
-    right: -340px;
+    right: 0;
     background-repeat: no-repeat;
     background-size: cover;
     @include md-block() {

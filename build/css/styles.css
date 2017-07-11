@@ -148,7 +148,7 @@ img {
 
 .header-top {
   padding-bottom: 25px;
-  padding-top: 25px;
+  padding-top: 35px;
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 16px;
 }
@@ -233,10 +233,12 @@ img {
   color: #35353d;
   font-weight: bold;
   font-size: 18px;
+  line-height: 13px;
+  margin-bottom: 4px;
 }
 
 .header-top__link {
-  font-size: 18px;
+  font-size: 24px;
   font-family: "Open Sans";
   color: #057da9;
   font-weight: bold;
@@ -249,7 +251,7 @@ img {
   text-align: center;
   background-color: white;
   border: 1px solid;
-  padding: 10px;
+  height: 35px;
   width: 300px;
   line-height: 1;
   border-radius: 3px;
@@ -301,6 +303,8 @@ img {
   margin-right: 15px;
   word-wrap: break-word;
   width: calc(50% - 30px);
+  height: 55px;
+  line-height: 25px;
 }
 
 .page-header__main-words {
@@ -359,8 +363,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -30px;
-  margin-bottom: -30px;
-  position: relative;
+  margin-bottom: 80px;
   z-index: 1;
 }
 
@@ -377,6 +380,9 @@ img {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .action__info {
@@ -393,12 +399,13 @@ img {
   margin-right: 15px;
   word-wrap: break-word;
   width: calc(41.66667% - 30px);
+  margin: 0;
 }
 
 .action__headline {
   font-size: 100px;
-  font-family: "Open Sans";
-  color: white;
+  font-family: 'Open Sans';
+  color: #fff;
   text-transform: uppercase;
   text-align: left;
   font-weight: 900;
@@ -408,6 +415,7 @@ img {
 
 .action__promo {
   font-size: 26px;
+  margin-bottom: 20px;
 }
 
 .timer {
@@ -481,6 +489,10 @@ img {
   justify-content: center;
   border-radius: 3px;
   border: 2px solid #00a4e6;
+  height: 53px;
+  width: 780px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .tabs__header {
@@ -489,20 +501,27 @@ img {
   color: #057da9;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1;
+  height: 53px;
+  line-height: 53px;
   text-align: center;
-  padding: 20px;
   width: 390px;
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
-  -webkit-text-decoration-style: dotted;
-  text-decoration-style: dotted;
   cursor: pointer;
 }
 
+.tabs__header span {
+  display: inline-block;
+  border-bottom: 2px dotted #00a4e6;
+  line-height: normal;
+  vertical-align: middle;
+}
+
 .tabs__header:hover {
-  color: black;
+  color: #000;
   text-decoration: none;
+}
+
+.tabs__header:hover span {
+  border-color: transparent;
 }
 
 .tabs__header.slick-current {
@@ -513,7 +532,6 @@ img {
 }
 
 .services {
-  padding-top: 50px;
   padding-bottom: 100px;
 }
 
@@ -776,12 +794,28 @@ img {
 .search__input {
   line-height: 1;
   width: 100%;
-  padding-right: 60px;
-  padding: 10px;
+  height: 35px;
+  padding: 0 60px 0 10px;
   border-radius: 3px;
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
   font-size: 14px;
+}
+
+.search .search__input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.search .search__input::-moz-placeholder {
+  color: #ccc;
+}
+
+.search .search__input:-moz-placeholder {
+  color: #ccc;
+}
+
+.search .search__input:-ms-input-placeholder {
+  color: #ccc;
 }
 
 .search__submit {
@@ -870,7 +904,7 @@ img {
 
 .feed-back {
   background-image: linear-gradient(141deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
-  border: 1px  solid white;
+  border: 1px solid white;
   padding: 50px 65px;
 }
 
@@ -967,6 +1001,22 @@ img {
   border: 1px solid #cccccc;
 }
 
+.feed-back .feed-back__input::-webkit-input-placeholder {
+  color: #35353d;
+}
+
+.feed-back .feed-back__input::-moz-placeholder {
+  color: #35353d;
+}
+
+.feed-back .feed-back__input:-moz-placeholder {
+  color: #35353d;
+}
+
+.feed-back .feed-back__input:-ms-input-placeholder {
+  color: #35353d;
+}
+
 .feed-back__btn {
   width: 100%;
   border: 1px solid #ff7e00;
@@ -1042,9 +1092,9 @@ img {
   background-image: url("../img/gifts-rigth.png");
   background-position: left;
   height: 100%;
-  max-width: 527px;
+  width: 527px;
   top: 0;
-  right: -340px;
+  right: 0;
   background-repeat: no-repeat;
   background-size: cover;
 }

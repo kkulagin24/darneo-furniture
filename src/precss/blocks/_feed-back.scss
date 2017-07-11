@@ -1,6 +1,6 @@
 .feed-back {
   background-image: linear-gradient(141deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, .2));
-  border: 1px  solid white;
+  border: 1px solid white;
   padding: 50px 65px;
 
   @include md-block() {
@@ -58,7 +58,6 @@
     margin-bottom: 20px;
     line-height: 1;
 
-
     @include md-block() {
       width: 100%;
       text-align: left;
@@ -113,6 +112,7 @@
       border: 1px solid #cccccc;
     }
   }
+  @include placeholder-color(feed-back__input, $c-bg-gray);
 
   &__btn {
     width: 100%;

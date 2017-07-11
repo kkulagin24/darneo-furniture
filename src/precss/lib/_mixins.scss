@@ -347,7 +347,7 @@
   [type="button"]:-moz-focusring,
   [type="reset"]:-moz-focusring,
   [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
+    //outline: 1px dotted ButtonText;
   }
 
   /**
@@ -500,5 +500,24 @@
 
   [hidden] {
     display: none;
+  }
+}
+
+@mixin placeholder-color($cssClassName, $color) {
+
+  .#{$cssClassName}::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  .#{$cssClassName}::-moz-placeholder {
+    color: $color;
+  }
+
+  .#{$cssClassName}:-moz-placeholder {
+    color: $color;
+  }
+
+  .#{$cssClassName}:-ms-input-placeholder {
+    color: $color;
   }
 }
