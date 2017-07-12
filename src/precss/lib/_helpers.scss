@@ -36,3 +36,11 @@ body {
     display: none;
   }
 }
+
+button {
+
+  &:focus,
+  &:hover {
+    outline: none !important;
+  }
+}

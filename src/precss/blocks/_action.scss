@@ -9,6 +9,10 @@
   margin-bottom: 80px;
   z-index: 1;
 
+  &_bottom {
+    margin-bottom: -20px;
+  }
+
   &__wrap {
     @include row-flex();
     padding: 100px 0;

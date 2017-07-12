@@ -1,0 +1,33 @@
+.jq-checkbox {
+  border: 2px solid $c-blue;
+  border-radius: 3px;
+
+  cursor: pointer;
+
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+
+  height: 20px;
+  width: 20px;
+
+  vertical-align: -6px;
+
+  input {
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+
+  &.checked {
+
+    .jq-checkbox__div {
+      background-color: $c-blue;
+      margin: 2px;
+      height: 12px;
+      width: 12px;
+    }
+  }
+}

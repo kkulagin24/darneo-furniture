@@ -92,7 +92,7 @@
 
     &--mail {
       top: 60px;
-      left: 27%;
+      left: 21%;
       transform: translateX(-50%);
 
       @include md-block() {
@@ -105,7 +105,7 @@
       &::before {
         top: 45%;
         left: -20px;
-        transform: rotate(135deg)  skew(5deg);
+        transform: rotate(140deg)  skew(5deg);
         @include md-block() {
           top: -11px;
           left: 29px;
@@ -127,7 +127,7 @@
 
 
       &::before {
-        top: 45%;
+        top: 58px;
         left: -20px;
         transform: rotate(135deg)  skew(5deg);
         @include md-block() {
@@ -140,7 +140,7 @@
 
     &--project {
       top: 60px;
-      right: 27%;
+      right: 21%;
       transform: translateX(50%);
 
       @include md-block() {
@@ -150,7 +150,7 @@
 
 
       &::before {
-        top: 45%;
+        top: 58px;
         left: -20px;
         transform: rotate(135deg)  skew(5deg);
 
@@ -164,7 +164,7 @@
 
     &--discount {
       bottom: 60px;
-      left: 27%;
+      left: 21%;
       transform: translateX(-50%);
       @include md-block() {
         bottom: 483px;
@@ -208,7 +208,7 @@
 
     &--acts {
       bottom: 60px;
-      right: 27%;
+      right: 21%;
       transform: translateX(50%);
 
       @include md-block() {
@@ -288,11 +288,11 @@
   }
 
   &__text {
-    padding: 5px 10px;
-    background-color: white;
+    padding: 5px 0;
+    background-color: #fff;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    //left: 50%;
+    //transform: translateX(-50%);
     text-align: center;
     font-size: 16px;
     width: 225%;
@@ -312,22 +312,27 @@
 
     &--mail {
       top: -60px;
+      left: -76px;
 
       @include lg-block() {
         top: -75px;
       }
     }
+
     &--measure {
       // width: 210%;
       top: -60px;
+      left: -82px;
 
       @include lg-block() {
         top: -75px;
       }
     }
+
     &--project {
       // width: 200%;
       top: -60px;
+      left: -78px;
 
       @include lg-block() {
         top: -75px;
@@ -336,13 +341,19 @@
 
     &--you {
       width: auto;
+      left: 53px;
+
       @include md-block() {
         top: -30px;
         transform: translateX(-50%);
         text-align: center;
       }
     }
+
     &--build {
+      left: -55px;
+      width: 200px;
+
       @include md-block() {
         top: 140px;
         transform: translateX(-50%);
@@ -353,14 +364,14 @@
     &--measure,
     &--mail,
     &--project {
-      left: 130px;
+      //left: 130px;
       // transform: none;
     }
 
     &--clean,
     &--discount,
     &--acts {
-      left: -155px;
+      left: -78px;
     }
 
     &--cnt {

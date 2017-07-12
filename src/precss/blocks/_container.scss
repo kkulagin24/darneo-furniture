@@ -5,12 +5,15 @@
   @include lg-block() {
     width: 970px;
   };
+
   @include md-block() {
     width: 750px;
   };
+
   @include sm-block() {
     width: 480px;
   };
+
   @include xs-block() {
     width: 320px;
   };

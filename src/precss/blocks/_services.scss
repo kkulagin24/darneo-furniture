@@ -1,6 +1,19 @@
 .services {
   //padding-top: 50px;
+  background: url('../img/bg-our-services-left.png') 64px 50% no-repeat;
   padding-bottom: 100px;
+  position: relative;
+
+  &:before {
+    background: url('../img/bg-our-services-right.png') 0 50% no-repeat;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 58px;
+    width: 243px;
+  }
+
   &__wrap {
     display: flex;
     justify-content: center;
