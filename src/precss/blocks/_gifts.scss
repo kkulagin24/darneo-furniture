@@ -5,6 +5,7 @@
   transform: translateX(-50%);
   height: 653px;
   width: 100%;
+  overflow: hidden;
   pointer-events: none;
 
   @include md-block() {
@@ -50,27 +51,13 @@
   }
 }
 
-@media screen and (max-width: 1600px) {
-  .gifts {
-    overflow: hidden;
+@media screen and (max-width: 1350px) {
 
-    &:before {
-      left: -200px;
-    }
-    &:after {
-      right: -300px;
-    }
-  }
-}
-@media screen and (max-width: 1350px) and (min-width: 1170px) {
   .gifts {
-    overflow: hidden;
 
-    &:before {
-      left: -270px;
-    }
+    &:before,
     &:after {
-      right: -350px;
+      display: none;
     }
   }
 }

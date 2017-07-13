@@ -1089,6 +1089,7 @@ button:hover {
   transform: translateX(-50%);
   height: 653px;
   width: 100%;
+  overflow: hidden;
   pointer-events: none;
 }
 
@@ -1463,7 +1464,7 @@ button:hover {
 .scheme__text--cnt::before {
   counter-increment: list;
   content: counter(list) ". ";
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .pf-slider {
@@ -1823,17 +1824,18 @@ button:hover {
   width: 12px;
 }
 
-@media screen and (max-width: 1600px) {
-  .gifts {
-    overflow: hidden;
+@media screen and (max-width: 1350px) {
+  .services {
+    background: none;
   }
 
-  .gifts:before {
-    left: -200px;
+  .services:before {
+    display: none;
   }
 
+  .gifts:before,
   .gifts:after {
-    right: -300px;
+    display: none;
   }
 }
 
@@ -1896,21 +1898,85 @@ button:hover {
     font-size: 50px;
   }
 
+  .scheme__item--mail {
+    left: 24%;
+  }
+
+  .scheme__item--mail::before {
+    top: 50%;
+    -webkit-transform: rotate(120deg) skew(5deg);
+    -ms-transform: rotate(120deg) skew(5deg);
+    transform: rotate(120deg) skew(5deg);
+  }
+
+  .scheme__item--project {
+    right: 24%;
+  }
+
+  .scheme__item--discount {
+    left: 24%;
+  }
+
+  .scheme__item--acts {
+    right: 24%;
+  }
+
+  .scheme__item--acts::before {
+    top: 38%;
+    -webkit-transform: rotate(-60deg) skew(5deg);
+    -ms-transform: rotate(-60deg) skew(5deg);
+    transform: rotate(-60deg) skew(5deg);
+  }
+
   .scheme__text {
     font-size: 15px;
     width: 165%;
   }
 
   .scheme__text--mail {
-    top: -75px;
+    top: -70px;
+    left: -20px;
+    width: 160px;
   }
 
   .scheme__text--measure {
-    top: -75px;
+    top: -70px;
+    left: -22px;
+    width: 170px;
   }
 
   .scheme__text--project {
-    top: -75px;
+    top: -70px;
+    left: -36px;
+    width: 190px;
+  }
+
+  .scheme__text--you {
+    width: 30px;
+  }
+
+  .scheme__text--build {
+    top: 132px;
+    left: -26px;
+    width: 164px;
+  }
+
+  .scheme__text--acts {
+    top: 128px;
+    left: -48px;
+    width: 228px;
+  }
+
+  .scheme__text--clean {
+    top: 128px;
+    left: -16px;
+    width: 163px;
+  }
+
+  .scheme__text--discount {
+    top: 128px;
+    left: -16px;
+    width: 163px;
   }
 
   .pf-slider__descr {
@@ -1994,6 +2060,14 @@ button:hover {
   .timer__wrap {
     width: 92px;
     height: 92px;
+  }
+
+  .tabs__headers {
+    width: 100%;
+  }
+
+  .tabs__header {
+    width: 50%;
   }
 
   .page-footer__menu {
@@ -2098,6 +2172,16 @@ button:hover {
     left: calc(50% + 260px);
   }
 
+  .advantages__wrap {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .advantages__item {
+    font-size: 16px;
+    width: 196px;
+  }
+
   .slogan__text {
     font-size: 54px;
   }
@@ -2108,6 +2192,7 @@ button:hover {
 
   .scheme {
     height: 730px;
+    margin-top: 30px;
     margin-bottom: 0;
   }
 
@@ -2233,11 +2318,16 @@ button:hover {
     transform: rotate(10deg) skew(5deg);
   }
 
+  .scheme__text span {
+    display: none;
+  }
+
   .scheme__text {
     font-size: 14px;
-    width: 120%;
+    width: 140px;
     text-align: left;
-    top: 40px;
+    top: 30px;
+    left: 100%;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
@@ -2245,18 +2335,28 @@ button:hover {
 
   .scheme__text--you {
     top: -30px;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
     text-align: center;
+    width: 130px;
+    left: 0;
   }
 
   .scheme__text--build {
-    top: 140px;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    top: 130px;
+    left: 0;
     text-align: center;
+  }
+
+  .scheme__text--measure,
+  .scheme__text--act,
+  .scheme__text--project {
+    top: 20px;
+  }
+
+  .scheme__text--clean,
+  .scheme__text--discount,
+  .scheme__text--acts {
+    left: -100%;
+    width: 130px;
   }
 
   .pf-slider__item {
@@ -2278,6 +2378,16 @@ button:hover {
   .pf-slider__arrow {
     top: 370px;
     bottom: 0;
+  }
+
+  .workers__slide img {
+    width: auto;
+  }
+
+  .workers__descr {
+    padding-top: 0;
+    padding-right: 0;
+    margin-left: 30px;
   }
 }
 
@@ -2341,19 +2451,5 @@ button:hover {
   .container {
     padding-left: 15px;
     padding-right: 15px;
-  }
-}
-
-@media screen and (max-width: 1350px) and (min-width: 1170px) {
-  .gifts {
-    overflow: hidden;
-  }
-
-  .gifts:before {
-    left: -270px;
-  }
-
-  .gifts:after {
-    right: -350px;
   }
 }

@@ -11,6 +11,7 @@
 
   @include md-block() {
     height: 730px;
+    margin-top: 30px;
     margin-bottom: 0;
   }
 
@@ -95,6 +96,10 @@
       left: 21%;
       transform: translateX(-50%);
 
+      @include lg-block() {
+        left: 24%;
+      }
+
       @include md-block() {
         left: 508px;
         top: 125px;
@@ -106,6 +111,11 @@
         top: 45%;
         left: -20px;
         transform: rotate(140deg)  skew(5deg);
+        @include lg-block() {
+          top: 50%;
+          transform: rotate(120deg)  skew(5deg);
+        }
+
         @include md-block() {
           top: -11px;
           left: 29px;
@@ -143,6 +153,10 @@
       right: 21%;
       transform: translateX(50%);
 
+      @include lg-block() {
+        right: 24%;
+      }
+
       @include md-block() {
         top: 480px;
         right: 212px;
@@ -166,6 +180,11 @@
       bottom: 60px;
       left: 21%;
       transform: translateX(-50%);
+
+      @include lg-block() {
+        left: 24%;
+      }
+
       @include md-block() {
         bottom: 483px;
         left: 212px;
@@ -211,6 +230,10 @@
       right: 21%;
       transform: translateX(50%);
 
+      @include lg-block() {
+        right: 24%;
+      }
+
       @include md-block() {
         bottom: 117px;
         right: 508px;
@@ -219,6 +242,10 @@
         right: -17px;
         top: 43%;
         transform: rotate(-45deg) skew(5deg);
+        @include lg-block() {
+          top: 38%;
+          transform: rotate(-60deg) skew(5deg);
+        }
         @include md-block() {
           right: 24px;
           top: 122px;
@@ -297,6 +324,12 @@
     font-size: 16px;
     width: 225%;
 
+    span {
+      @include md-block() {
+        display: none;
+      }
+    }
+
     @include lg-block() {
       font-size: 15px;
       width: 165%;
@@ -304,9 +337,10 @@
 
     @include md-block() {
       font-size: 14px;
-      width: 120%;
+      width: 140px;
       text-align: left;
-      top: 40px;
+      top: 30px;
+      left: 100%;
       transform: none;
     }
 
@@ -315,7 +349,9 @@
       left: -76px;
 
       @include lg-block() {
-        top: -75px;
+        top: -70px;
+        left: -20px;
+        width: 160px;
       }
     }
 
@@ -325,7 +361,9 @@
       left: -82px;
 
       @include lg-block() {
-        top: -75px;
+        top: -70px;
+        left: -22px;
+        width: 170px;
       }
     }
 
@@ -335,7 +373,9 @@
       left: -78px;
 
       @include lg-block() {
-        top: -75px;
+        top: -70px;
+        left: -36px;
+        width: 190px;
       }
     }
 
@@ -343,10 +383,14 @@
       width: auto;
       left: 53px;
 
+      @include lg-block() {
+        width: 30px;
+      }
       @include md-block() {
         top: -30px;
-        transform: translateX(-50%);
         text-align: center;
+        width: 130px;
+        left: 0;
       }
     }
 
@@ -354,31 +398,70 @@
       left: -55px;
       width: 200px;
 
+      @include lg-block() {
+        top: 132px;
+        left: -26px;
+        width: 164px;
+      }
+
       @include md-block() {
-        top: 140px;
-        transform: translateX(-50%);
+        top: 130px;
+        left: 0;
         text-align: center;
+      }
+    }
+    &--acts {
+
+      @include lg-block() {
+        top: 128px;
+        left: -48px;
+        width: 228px;
+      }
+    }
+
+    &--clean {
+
+      @include lg-block() {
+        top: 128px;
+        left: -16px;
+        width: 163px;
+      }
+    }
+
+    &--discount {
+
+      @include lg-block() {
+        top: 128px;
+        left: -16px;
+        width: 163px;
       }
     }
 
     &--measure,
-    &--mail,
+    &--act,
     &--project {
-      //left: 130px;
-      // transform: none;
+      @include md-block() {
+        top: 20px;
+      }
     }
 
     &--clean,
     &--discount,
     &--acts {
       left: -78px;
+
+      @include md-block() {
+        left: -100%;
+        width: 130px;
+      }
     }
 
     &--cnt {
+
       &::before {
         counter-increment: list;
-        content: counter(list) ". ";
-        font-weight: bold;
+        content: counter(list) '. ';
+        font-weight: 700;
       }
     }
   }

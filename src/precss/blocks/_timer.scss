@@ -1,6 +1,9 @@
 .timer {
   display: flex;
   @include row-flex();
+  @include md-block() {
+    //float: right;
+  }
 
   &__counter {
     display: flex;
