@@ -30,6 +30,11 @@
       height: 155px;
       width: 100%;
     }
+
+    @include sm-block() {
+      display: block;
+      height: auto;
+    }
   }
 
   &__form {

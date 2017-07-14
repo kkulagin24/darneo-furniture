@@ -2422,17 +2422,37 @@ button:hover {
   }
 
   .page-header__wrap {
-    position: fixed;
-    min-height: 100vh;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: white;
-    z-index: 10;
+    /*position: fixed;
+      min-height: 100vh;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background-color: white;
+      z-index: 10;*/
+  }
+
+  .action__info {
+    display: block;
+    height: auto;
   }
 
   .search {
     width: 450px;
+  }
+
+  .scheme::before {
+    display: none;
+  }
+
+  .scheme__item {
+    position: static;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .scheme__text {
+    position: static;
   }
 }
 
