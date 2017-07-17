@@ -4,10 +4,20 @@
   border-bottom: 1px solid $c-l-gray;
   margin-bottom: 16px;
 
+  .container {
+    @include sm-block() {
+      position: static!important;
+    }
+  }
+
   &__wrap {
     display: flex;
     justify-content: space-between;
+    @include sm-block() {
+      //position: relative;
+    }
   }
+
   &__logo {
     text-align: center;
     color: $c-blue;
@@ -15,6 +25,10 @@
 
     @include lg-block() {
       margin-right: 30px;
+    }
+    @include sm-block() {
+      margin-right: 0;
+      width: 130px;
     }
   }
   &__company {
@@ -34,12 +48,35 @@
     @include md-block() {
       flex-direction: column;
     }
+    @include sm-block() {
+      background-color: #fff;
+      padding: 20px 0;
+      position: absolute;
+      top: 110px;
+      left: 50%;
+      margin-left: -225px;
+      z-index: 9;
+      width: 450px;
+    }
+
+    &:before {
+      @include sm-block() {
+        background-color: #fff;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: -250px;
+        right: -250px;
+        left: -250px;
+      }
+    }
   }
 
   &__btns {
     display: flex;
     @include sm-block() {
       flex-direction: column;
+      margin-top: 13px;
     }
   }
 
@@ -83,6 +120,11 @@
 
 
   &__contacts {
+    @include sm-block() {
+      margin-top: 25px;
+      position: relative;
+    }
+
     span {
       color: #cccccc;
       margin: 20px;
@@ -95,14 +137,20 @@
     font-size: 18px;
     line-height: 13px;
     margin-bottom: 4px;
+    @include sm-block() {
+      margin-bottom: 10px;
+    }
   }
 
   &__link {
     font-size: 24px;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     color: #057da9;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
+    @include sm-block() {
+      font-size: 20px;
+    }
   }
 
   &__btn {

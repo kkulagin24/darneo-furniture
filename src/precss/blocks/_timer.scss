@@ -4,6 +4,9 @@
   @include md-block() {
     //float: right;
   }
+  @include sm-block() {
+    justify-content: space-between;
+  }
 
   &__counter {
     display: flex;

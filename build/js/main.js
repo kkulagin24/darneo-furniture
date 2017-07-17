@@ -35,4 +35,11 @@ $(window).stellar({
 
 $(document).ready(function (e) {
     $('.custom-checkbox').styler();
+
+    $('.page-header__show-header').click(function(e){
+        $('.main-menu,.header-top__right').removeClass('md-hidden');
+    });
+    $('.main-menu__close-header').click(function(e){
+        $('.main-menu,.header-top__right').addClass('md-hidden');
+    });
 });
