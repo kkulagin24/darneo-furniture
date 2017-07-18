@@ -17,6 +17,9 @@
     @include md-block() {
       @include size(6);
     }
+    @include sm-block() {
+      @include size(12);
+    }
 
     &-link {
       width: 49%;
@@ -40,6 +43,9 @@
     line-height: 1.5;
     @include md-block() {
       @include size(6);
+    }
+    @include sm-block() {
+      @include size(12);
     }
 
     a {
@@ -67,6 +73,9 @@
       align-items: center;
       margin-top: 30px;
     }
+    @include sm-block() {
+      justify-content: space-between;
+    }
   }
 
   &__btn {
@@ -80,6 +89,11 @@
       padding-right: 60px;
       padding-left: 60px;
     }
+    @include sm-block() {
+      @include size(8);
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   &__copyright {
     font-size: 13px;
@@ -88,6 +102,10 @@
 
     @include md-block() {
       margin-left: 82px;
+    }
+    @include sm-block() {
+      @include size(6);
+      margin-left: 0;
     }
   }
   &__copy-link {
