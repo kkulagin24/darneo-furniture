@@ -16,6 +16,7 @@
   <script type="text/javascript" src="js/jquery.final-countdown.js"></script>
   <script type="text/javascript" src="js/jquery.final-countdown2.js"></script>
   <script type="text/javascript" src="js/jquery.formstyler.min.js"></script>
+  <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -192,11 +193,8 @@
                 <a class="btn btn--orange service__btn">рассчитать стоимость</a>
               </article>
               <article class="service">
-                <div class="service__round service__round--two" style="background-image: url('img/stuff.jpg')">
-                  <!--<img src="img/stuff.jpg" alt="" class="service__img" alt="service" >-->
-                  <div class="service__round service__round--small" style="background-image: url('img/sofa.jpg')">
-                    <!--<img src="img/sofa.jpg" alt="" class="service__img"alt="service">-->
-                  </div>
+                <div class="service__round" style="background-image: url('img/stuff.jpg')">
+                  <div class="service__round service__round--small" style="background-image: url('img/sofa.jpg')"></div>
                 </div>
                 <h3 class="service__name">всё остальное</h3>
                 <p class="service__price">10% от стоимости, но не менее 1 тыс. руб.</p>
@@ -226,23 +224,6 @@
           </div>
         </div>
       </div>
-      <script>
-        $('.tabs__content').slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          fade: true,
-          asNavFor: '.tabs__headers'
-        });
-        $('.tabs__headers').slick({
-          slidesToShow: 2,
-          slidesToScroll: 0,
-          asNavFor: '.tabs__content',
-          dots: false,
-          centerMode: false,
-          focusOnSelect: true
-        });
-      </script>
     </section>
     <section class="portfolio">
       <div class="container">
@@ -297,16 +278,6 @@
 
         </div>
       </div>
-      <script>
-        $('.pf-slider').slick({
-          infinite: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          dots: true,
-          appendDots: '.pf-slider__controls'
-        });
-      </script>
     </section>
     <section class="advantages">
       <div class="container">
@@ -315,10 +286,10 @@
       </h2>
         <div class="advantages__wrap">
           <div class="advantages__item advantages__item--talk">
-            Слушаем и советуем, а&nbsp;не&nbsp;просто выполняем
+            Слушаем и советуем, а не просто выполняем
           </div>
           <div class="advantages__item advantages__item--warranty">
-            Даём 1 год гарантии на&nbsp;материалы
+            Даём 1 год гарантии на материалы
           </div>
           <div class="advantages__item advantages__item--projects">
             Умеем реализовывать сложные проекты
@@ -331,7 +302,10 @@
         <h2 class="section-header section-header--black"><span>наши сборщики</span></h2>
         <div class="workers__slider">
           <div class="workers__slide">
-            <img src="img/worker.jpg" alt="">
+            <div class="workers__image">
+              <img src="img/worker.jpg" alt="">
+              <a href="#" class="btn btn--orange workers__btn">вызвать мастера</a>
+            </div>
             <div class="workers__descr">
               <h3 class="workers__name">
                 <span class="workers__surname">Морозов</span><br>
@@ -345,7 +319,10 @@
             </div>
           </div>
           <div class="workers__slide" style="filter: hue-rotate(120deg)">
-            <img src="img/worker.jpg" alt="">
+            <div class="workers__image">
+              <img src="img/worker.jpg" alt="">
+              <a href="#" class="btn btn--orange workers__btn">вызвать мастера</a>
+            </div>
             <div class="workers__descr">
               <h3 class="workers__name">
                 <span class="workers__surname">Морозов</span><br>
@@ -359,7 +336,10 @@
             </div>
           </div>
           <div class="workers__slide" style="filter: hue-rotate(240deg)">
-            <img src="img/worker.jpg" alt="">
+            <div class="workers__image">
+              <img src="img/worker.jpg" alt="">
+              <a href="#" class="btn btn--orange workers__btn">вызвать мастера</a>
+            </div>
             <div class="workers__descr">
               <h3 class="workers__name">
                 <span class="workers__surname">Морозов</span><br>
@@ -477,90 +457,6 @@
               </div>
             </div>
           </div>
-          <script type="text/javascript">
-            $(document).ready(function() {
-              $('.timer--1').final_countdown({
-                start: Date.now() - 3600 * 24 * 7,
-                end: Date.now() + 3600 * 24 * 7,
-                now: Date.now(),
-                selectors: {
-
-                      value_seconds: '.timer--1 .clock-seconds .val',
-
-                      canvas_seconds: 'canvas-seconds',
-
-                      value_minutes: '.timer--1 .clock-minutes .val',
-
-                      canvas_minutes: 'canvas-minutes',
-
-                      value_hours: '.timer--1 .clock-hours .val',
-
-                      canvas_hours: 'canvas-hours',
-
-                      value_days: '.timer--1 .clock-days .val',
-
-                      canvas_days: 'canvas-days'
-                },
-                seconds: {
-                  borderColor: '#01a5e6',
-                  borderWidth: '4'
-                },
-                minutes: {
-                  borderColor: '#01a5e6',
-                  borderWidth: '4'
-                },
-                hours: {
-                  borderColor: '#01a5e6',
-                  borderWidth: '4'
-                },
-                days: {
-                  borderColor: '#01a5e6',
-                  borderWidth: '4'
-                }
-              });
-            });
-            $(document).ready(function() {
-              $('.timer--2').final_countdown2({
-                start: Date.now() - 3600 * 24 * 7,
-                end: Date.now() + 3600 * 24 * 7,
-                now: Date.now(),
-                selectors: {
-
-                      value_seconds: '.timer--2 .clock-seconds .val',
-
-                      canvas_seconds: 'canvas-seconds-2',
-
-                      value_minutes: '.timer--2 .clock-minutes .val',
-
-                      canvas_minutes: 'canvas-minutes-2',
-
-                      value_hours: '.timer--2 .clock-hours .val',
-
-                      canvas_hours: 'canvas-hours-2',
-
-                      value_days: '.timer--2 .clock-days .val',
-
-                      canvas_days: 'canvas-days-2'
-                },
-                seconds: {
-                  borderColor: '#01a5e6',
-                  borderWidth: '4'
-                },
-                minutes: {
-                  borderColor: '#01a5e6',
-                  borderWidth: '4'
-                },
-                hours: {
-                  borderColor: '#01a5e6',
-                  borderWidth: '4'
-                },
-                days: {
-                  borderColor: '#01a5e6',
-                  borderWidth: '4'
-                }
-              });
-            });
-          </script>
           <form action="" class="feed-back action__form">
 
             <header class="feed-back__headline">

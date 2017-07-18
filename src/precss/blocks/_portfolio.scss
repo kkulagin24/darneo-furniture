@@ -3,4 +3,7 @@
   background-image: url("../img/bg-folio.jpg");
   padding-bottom: 50px;
   padding-top: 100px;
+  @include sm-block() {
+    padding-top: 40px;
+  }
 }

@@ -31,4 +31,8 @@
   @include md-block() {
     font-size: 40px;
   }
+  @include sm-block() {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
 }

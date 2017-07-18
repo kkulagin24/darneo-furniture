@@ -1,11 +1,14 @@
 .timer {
   display: flex;
-  @include row-flex();
   @include md-block() {
     //float: right;
   }
   @include sm-block() {
     justify-content: space-between;
+  }
+
+  @media screen and (min-width: $break_sm) {
+    @include row-flex();
   }
 
   &__counter {
@@ -28,7 +31,7 @@
 
   &__num {
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 35px;
     color: #35353d;
   }
@@ -40,8 +43,11 @@
 
   &__wrap {
     position: relative;
-    @include col();
     @include size(3);
+
+    @media screen and (min-width: $break_sm) {
+      @include col();
+    }
 
     @include md-block() {
       width: 92px;

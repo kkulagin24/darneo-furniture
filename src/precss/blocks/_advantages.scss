@@ -3,6 +3,7 @@
 
   &__wrap {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 50px;
     padding: 0 67px 120px 67px;
@@ -10,6 +11,10 @@
     @include md-block() {
       padding-right: 0;
       padding-left: 0;
+    }
+    @include sm-block() {
+      justify-content: space-around;
+      padding-bottom: 35px;
     }
   }
 
@@ -24,9 +29,15 @@
       font-size: 16px;
       width: 196px;
     }
+    @include sm-block() {
+      font-size: 14px;
+      padding-top: 165px;
+      margin-bottom: 15px;
+    }
 
-    &::before {
-      content: "";
+    &::before,
+    &::after {
+      content: '';
       position: absolute;
       background-repeat: no-repeat;
       height: 194px;
@@ -34,23 +45,36 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+      @include sm-block() {
+        height: 150px;
+        width: 150px;
+      }
+    }
+
+    &::before {
+      background-image: url("../img/bg-icon.png");
+      background-size: contain;
+    }
+
+    &::after {
+      background-size: 50%;
     }
 
     &--talk {
-      &::before {
-        background-image: url("../img/icon-talk.png"), url("../img/bg-icon.png");
+      &::after {
+        background-image: url("../img/icon-talk.png");
         background-position: center;
       }
     }
     &--warranty {
-      &::before {
-        background-image: url("../img/icon-garantee.png"), url("../img/bg-icon.png");
+      &::after {
+        background-image: url("../img/icon-garantee.png");
         background-position: center;
       }
     }
     &--projects {
-      &::before {
-        background-image: url("../img/icon-projects.png"), url("../img/bg-icon.png");
+      &::after {
+        background-image: url("../img/icon-projects.png");
         background-position: center;
       }
     }

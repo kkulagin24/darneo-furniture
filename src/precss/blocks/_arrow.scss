@@ -60,16 +60,26 @@
     @include lg-block() {
       width: 340px;
     }
+    @include sm-block() {
+      font-size: 12px;
+      width: 200px;
+    }
 
     span {
       font-size: 40px;
       font-weight: bold;
       display: block;
       text-transform: none;
+      @include sm-block() {
+        font-size: 30px;
+      }
 
       span {
         font-size: 32px;
         display: inline;
+        @include sm-block() {
+          font-size: 24px;
+        }
       }
     }
 
