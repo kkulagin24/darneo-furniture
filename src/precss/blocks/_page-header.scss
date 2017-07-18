@@ -78,12 +78,22 @@
       margin: 0;
     }
 
+    @include xs-block() {
+      left: 110px;
+      right: 38px;
+    }
+
     .btn {
       height: 55px;
       line-height: 25px;
 
       @include sm-block() {
         display: block;
+      }
+      @include xs-block() {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 10px;
       }
 
       &:first-child {

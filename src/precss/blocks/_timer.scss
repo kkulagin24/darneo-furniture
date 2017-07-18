@@ -27,6 +27,10 @@
       width: 92px;
       height: 92px;
     }
+    @include xs-block() {
+      height: 60px;
+      width: 60px;
+    }
   }
 
   &__num {
@@ -34,11 +38,18 @@
     font-weight: 700;
     line-height: 35px;
     color: #35353d;
+    @include xs-block() {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__units {
     color: #35353d;
     font-size: 14px;
+    @include xs-block() {
+      font-size: 8px;
+    }
   }
 
   &__wrap {
@@ -52,6 +63,10 @@
     @include md-block() {
       width: 92px;
       height: 92px;
+    }
+    @include xs-block() {
+      height: 60px;
+      width: 60px;
     }
   }
 

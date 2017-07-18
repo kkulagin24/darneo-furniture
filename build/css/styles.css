@@ -4,6 +4,7 @@ body {
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 *,
@@ -2961,6 +2962,54 @@ button:hover {
 
   .container {
     width: 320px;
+  }
+
+  .header-top__logo {
+    width: 93px;
+  }
+
+  .header-top__company-name {
+    font-size: 13px;
+  }
+
+  .header-top__company-slogan {
+    font-size: 8px;
+  }
+
+  .page-header__btns {
+    left: 110px;
+    right: 38px;
+  }
+
+  .page-header__btns .btn {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 10px;
+  }
+
+  .timer__counter {
+    height: 60px;
+    width: 60px;
+  }
+
+  .timer__num {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .timer__units {
+    font-size: 8px;
+  }
+
+  .timer__wrap {
+    height: 60px;
+    width: 60px;
+  }
+
+  .section-header {
+    font-size: 22px;
+    margin-bottom: 5px;
+    overflow: hidden;
   }
 }
 

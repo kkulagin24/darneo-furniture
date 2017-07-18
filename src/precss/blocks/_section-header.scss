@@ -35,4 +35,9 @@
     font-size: 30px;
     margin-bottom: 5px;
   }
+  @include xs-block() {
+    font-size: 22px;
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
 }
