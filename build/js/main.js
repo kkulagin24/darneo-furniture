@@ -40,14 +40,15 @@ $(document).ready(function (e) {
         fade: true
     });
 
+    $('.tabs__content').on('afterChange', function(e, slick){
+        setActiveTab($('.tabs__header').eq(slick.currentSlide));
+    });
+
     $(document).on('click', '.tabs__header:not(.tabs__header--active)', function(e){
-        var container = $(this).closest('.tabs__headers'),
-            buttons = container.find('.tabs__header'),
-            slickSlider = $('.tabs__content'),
+        var slickSlider = $('.tabs__content'),
             slideNumber = $(this).index();
 
-        buttons.removeClass('tabs__header--active');
-        $(this).addClass('tabs__header--active');
+        setActiveTab($(this));
 
         if(slickSlider.hasClass('slick-initialized')) {
             slickSlider.slick('slickGoTo', slideNumber);
@@ -144,3 +145,11 @@ $(document).ready(function (e) {
         }
     });
 });
+
+function setActiveTab($clickedTab) {
+    var container = $clickedTab.closest('.tabs__headers'),
+        buttons = container.find('.tabs__header');
+
+    buttons.removeClass('tabs__header--active');
+    $clickedTab.addClass('tabs__header--active');
+}

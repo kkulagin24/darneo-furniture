@@ -15,9 +15,12 @@
     margin-right: 15px;
     padding: 19px;
   }
+  @include xs-block() {
+    padding: 30px 20px;
+  }
 
   &--popup {
-    background: white;
+    background: #fff;
     width: 455px;
     margin: 0 auto;
     position: absolute;
@@ -68,6 +71,10 @@
       text-align: left;
       font-size: 22px;
     }
+    @include xs-block() {
+      font-size: 14px;
+      text-align: center;
+    }
 
     span {
       line-height: 1;
@@ -75,6 +82,9 @@
       display: block;
       @include md-block() {
         display: inline;
+      }
+      @include xs-block() {
+        font-size: 14px;
       }
     }
   }
@@ -118,6 +128,10 @@
       margin-right: 0;
       margin-left: 0;
     }
+    @include xs-block() {
+      margin-bottom: 10px;
+      width: 100%;
+    }
 
     &--border {
       border: 1px solid #cccccc;
@@ -140,6 +154,9 @@
       width: 100%;
       flex-basis: 100%;
       margin-top: 16px;
+    }
+    @include xs-block() {
+      margin-top: 0;
     }
   }
 }

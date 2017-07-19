@@ -72,7 +72,10 @@
 
     @include md-block() {
       font-size: 54px;
-      //float: left;
+    }
+    @include xs-block() {
+      font-size: 32px;
+      margin-bottom: 10px;
     }
   }
 
@@ -88,6 +91,9 @@
     }
     @include sm-block() {
       width: auto;
+    }
+    @include xs-block() {
+      font-size: 14px;
     }
   }
 }

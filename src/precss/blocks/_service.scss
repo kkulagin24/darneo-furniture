@@ -17,6 +17,10 @@
     @include sm-block() {
       font-size: 18px;
     }
+    @include xs-block() {
+      font-size: 14px;
+      margin-top: 15px;
+    }
   }
 
   &__price {
@@ -29,6 +33,10 @@
     @include sm-block() {
       font-size: 14px;
     }
+    @include xs-block() {
+      font-size: 13px;
+      margin-top: 7px;
+    }
   }
 
   &__btn {
@@ -37,6 +45,9 @@
       font-size: 12px;
       padding-left: 20px;
       padding-right: 20px;
+    }
+    @include xs-block() {
+      margin-top: 16px;
     }
   }
 
@@ -51,6 +62,10 @@
     @include sm-block() {
       height: 160px;
       width: 160px;
+    }
+    @include xs-block() {
+      height: 120px;
+      width: 120px;
     }
 
     &--two {
@@ -67,6 +82,12 @@
         left: -35px;
         height: 100px;
         width: 100px;
+      }
+      @include xs-block() {
+        left: -18px;
+        bottom: -3px;
+        height: 70px;
+        width: 70px;
       }
     }
   }

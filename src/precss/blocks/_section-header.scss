@@ -13,14 +13,14 @@
       position: absolute;
       top: 55%;
       transform: translateY(-50%);
-      height: 6px;
-      width: 40px;
+      height: 3px;
+      width: 20px;
       background-color: currentColor;
-      right: -50px;
+      right: -28px;
     }
 
     &::before {
-      left: -50px;
+      left: -28px;
     }
   }
 
@@ -37,7 +37,7 @@
   }
   @include xs-block() {
     font-size: 22px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     overflow: hidden;
   }
 }

@@ -1,5 +1,8 @@
 .advantages {
   padding-top: 80px;
+  @include xs-block() {
+    padding-top: 35px;
+  }
 
   &__wrap {
     display: flex;
@@ -34,6 +37,11 @@
       padding-top: 165px;
       margin-bottom: 15px;
     }
+    @include xs-block() {
+      margin-bottom: 17px;
+      padding-top: 140px;
+      width: 140px;
+    }
 
     &::before,
     &::after {
@@ -48,6 +56,10 @@
       @include sm-block() {
         height: 150px;
         width: 150px;
+      }
+      @include xs-block() {
+        height: 120px;
+        width: 120px;
       }
     }
 

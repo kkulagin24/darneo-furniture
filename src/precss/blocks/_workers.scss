@@ -10,29 +10,39 @@
   }
 
   &__slider {
-    border: 10px solid white;
-    background-color: white;
+    border: 10px solid #fff;
+    background-color: #fff;
     margin-top: 25px;
   }
 
   &__slide {
     display: flex !important;
     align-items: flex-start;
+    @include xs-block() {
+      display: block !important;
+    }
   }
 
   &__image {
     @include size(5);
-    @include md-block () {
+    @include md-block() {
       width: auto;
     }
     @include sm-block() {
       width: 208px;
+    }
+    @include xs-block() {
+      margin-bottom: 15px;
+      width: 100%;
     }
 
     .btn {
       display: none;
       @include sm-block() {
         display: block;
+      }
+      @include xs-block() {
+        display: none;
       }
     }
   }
@@ -54,10 +64,18 @@
       font-size: 14px;
       margin-left: 15px;
     }
+    @include xs-block () {
+      text-align: center;
+      @include size(12);
+    }
 
     .btn {
       @include sm-block() {
         display: none;
+      }
+      @include xs-block() {
+        display: block;
+        width: 100%;
       }
     }
   }

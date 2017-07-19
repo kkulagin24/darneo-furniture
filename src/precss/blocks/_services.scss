@@ -6,6 +6,9 @@
   @include sm-block() {
     padding-bottom: 60px;
   }
+  @include xs-block() {
+    padding-bottom: 40px;
+  }
 
   &:before {
     background: url('../img/bg-our-services-right.png') 0 50% no-repeat;
@@ -31,6 +34,15 @@
     @include sm-block() {
       font-size: 14px;
       line-height: 20px;
+    }
+    @include xs-block() {
+      margin-bottom: 20px;
+    }
+
+    br {
+      @include xs-block() {
+        display: none;
+      }
     }
   }
 

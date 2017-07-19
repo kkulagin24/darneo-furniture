@@ -47,6 +47,15 @@
     @include sm-block() {
       @include size(12);
     }
+    @include xs-block() {
+      margin-top: 15px;
+    }
+
+    br {
+      @include xs-block() {
+        display: none;
+      }
+    }
 
     a {
       margin-top: 30px;
@@ -76,6 +85,9 @@
     @include sm-block() {
       justify-content: space-between;
     }
+    @include xs-block() {
+      flex-wrap: wrap;
+    }
   }
 
   &__btn {
@@ -94,7 +106,12 @@
       padding-left: 0;
       padding-right: 0;
     }
+    @include xs-block() {
+      margin-bottom: 15px;
+      width: 100%;
+    }
   }
+
   &__copyright {
     font-size: 13px;
     color: rgb(255, 255, 255);
@@ -107,7 +124,14 @@
       @include size(6);
       margin-left: 0;
     }
+    @include sm-block() {
+      width: 100%;
+    }
+    @include xs-block() {
+      text-align: center;
+    }
   }
+
   &__copy-link {
     color: $c-blue;
     text-decoration: none;

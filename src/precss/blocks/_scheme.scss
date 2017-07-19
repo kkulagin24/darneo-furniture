@@ -1,5 +1,8 @@
 .work-scheme {
   padding-top: 80px;
+  @include xs-block() {
+    padding-top: 35px;
+  }
 }
 
 .scheme {
@@ -44,6 +47,10 @@
       top: 0;
       left: 65px;
     }
+    @include xs-block() {
+      border-radius: 10px;
+      left: 55px;
+    }
   }
 
   &__item {
@@ -70,6 +77,9 @@
       left: 50% !important;
       top: -10px !important;
       transform: rotate(225deg) skew(5deg) translateX(65%) !important;
+      @include xs-block() {
+        left: 42% !important;
+      }
     }
 
     &--you {
@@ -294,10 +304,14 @@
   }
 
   &__icon {
-    width: 130px;
+    width: 110px;
     height: 130px;
     border-radius: 50%;
-    border: 10px solid white;
+    border: 10px solid #fff;
+    @include xs-block() {
+      border-left: none;
+      border-right: none;
+    }
 
     &--you {
       background-position: center;
@@ -371,6 +385,12 @@
       width: 272px;
       text-align: left;
       transform: translateY(-50%);
+    }
+    @include xs-block() {
+      font-size: 13px;
+      padding-left: 0;
+      margin-left: -5px;
+      width: 165px;
     }
 
     br {

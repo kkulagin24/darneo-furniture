@@ -9,6 +9,10 @@
     position: relative;
     padding-bottom: 110px;
   }
+  @include xs-block() {
+    background-position: 60% 0;
+    padding-bottom: 85px;
+  }
 
   .container {
     @include sm-block() {
@@ -40,27 +44,24 @@
       width: 50px;
       padding: 25px 15px 25px 25px;
     }
+    @include xs-block() {
+      height: 80px;
+      padding-top: 17px;
+      padding-left: 13px;
+    }
   }
 
   &__wrap {
     position: static;
-
-    @include sm-block() {
-      //position: relative;
-      /*position: fixed;
-      min-height: 100vh;
-      width: 100%;
-      left: 0;
-      top: 0;
-      background-color: white;
-      z-index: 10;*/
-    }
   }
 
   &__promo {
     margin-top: 90px;
     @include sm-block() {
       margin-top: 50px;
+    }
+    @include xs-block() {
+      margin-top: 60px;
     }
   }
 
@@ -79,8 +80,9 @@
     }
 
     @include xs-block() {
-      left: 110px;
-      right: 38px;
+      top: -159px;
+      left: 120px;
+      right: 23px;
     }
 
     .btn {
@@ -91,14 +93,18 @@
         display: block;
       }
       @include xs-block() {
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
+        height: 35px;
+        line-height: 35px;
         font-size: 10px;
       }
 
       &:first-child {
         @include sm-block() {
           margin-bottom: 5px;
+        }
+        @include xs-block() {
+          margin-bottom: 10px;
         }
       }
     }
@@ -132,11 +138,16 @@
       font-size: 36px;
     }
 
+    @include xs-block() {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
     span {
       color: #35353d;
       font-size: 30px;
       display: block;
-      font-weight: bold;
+      font-weight: 700;
 
 
       @include lg-block() {
@@ -149,6 +160,13 @@
 
       @include sm-block() {
         font-size: 15px;
+      }
+
+      @include xs-block() {
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 10px;
+        @include size(7);
       }
     }
   }

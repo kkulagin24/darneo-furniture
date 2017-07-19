@@ -7,6 +7,10 @@
     background-position-x: -475px;
     padding-top: 50px;
   }
+  @include sm-block() {
+    background-position-x: -530px;
+    padding-top: 50px;
+  }
 
   &__text {
     font-weight: 900;
@@ -24,6 +28,10 @@
     @include sm-block() {
       font-size: 30px;
     }
+    @include xs-block() {
+      font-size: 22px;
+      margin-top: 35px;
+    }
 
     span {
       display: block;
@@ -37,6 +45,9 @@
       }
       @include sm-block() {
         font-size: 24px;
+      }
+      @include xs-block() {
+        font-size: 17px;
       }
     }
   }

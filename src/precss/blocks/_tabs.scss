@@ -33,12 +33,23 @@
     @include sm-block () {
       font-size: 12px;
     }
+    @include xs-block () {
+      font-size: 10px;
+      padding: 0 20px;
+    }
 
     span {
       display: inline-block;
-      border-bottom: 2px dotted #00a4e6;
       line-height: normal;
       vertical-align: middle;
+      @include xs-block() {
+        line-height: 16px;
+      }
+
+      u {
+        border-bottom: 2px dotted #00a4e6;
+        text-decoration: none;
+      }
     }
 
     &:hover {

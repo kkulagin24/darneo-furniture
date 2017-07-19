@@ -11,7 +11,11 @@
   }
 
   @include sm-block() {
-    width: 450px;
+    width: 420px;
+  }
+
+  @include xs-block() {
+    width: 290px;
   }
 
   &__input {

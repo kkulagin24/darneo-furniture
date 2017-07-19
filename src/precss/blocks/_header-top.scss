@@ -3,19 +3,19 @@
   padding-top: 35px;
   border-bottom: 1px solid $c-l-gray;
   margin-bottom: 16px;
+  @include xs-block() {
+    padding-top: 20px;
+  }
 
   .container {
     @include sm-block() {
-      position: static!important;
+      position: static !important;
     }
   }
 
   &__wrap {
     display: flex;
     justify-content: space-between;
-    @include sm-block() {
-      //position: relative;
-    }
   }
 
   &__logo {
@@ -33,11 +33,19 @@
     @include xs-block() {
       width: 93px;
     }
+
+    img {
+      @include xs-block() {
+        height: 57px;
+        width: 55px;
+      }
+    }
   }
   &__company {
     &-name {
       font-size: 18px;
       @include xs-block() {
+        line-height: 13px;
         font-size: 13px;
       }
     }
@@ -59,13 +67,18 @@
     }
     @include sm-block() {
       background-color: #fff;
-      padding: 20px 0;
+      padding: 20px 15px;
       position: absolute;
       top: 110px;
       left: 50%;
       margin-left: -225px;
       z-index: 9;
       width: 450px;
+    }
+    @include xs-block() {
+      top: 143px;
+      margin-left: -160px;
+      width: 320px;
     }
 
     &:before {
@@ -137,6 +150,9 @@
     span {
       color: #cccccc;
       margin: 20px;
+      @include xs-block() {
+        display: none;
+      }
     }
   }
 
@@ -166,7 +182,7 @@
     font-size: 14px;
     color: #057da9;
     text-align: center;
-    background-color: white;
+    background-color: #fff;
     border: 1px solid;
     height: 35px;
     width: 300px;
