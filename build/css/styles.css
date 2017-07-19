@@ -1263,11 +1263,6 @@ button:hover {
   border-left: 2px solid #15a4d9;
   border-top: 2px solid #15a4d9;
   z-index: 2;
-  left: 50% !important;
-  top: -10px !important;
-  -webkit-transform: rotate(225deg) skew(5deg) translateX(65%) !important;
-  -ms-transform: rotate(225deg) skew(5deg) translateX(65%) !important;
-  transform: rotate(225deg) skew(5deg) translateX(65%) !important;
 }
 
 .scheme__item--you {
@@ -1399,7 +1394,7 @@ button:hover {
 }
 
 .scheme__icon {
-  width: 110px;
+  width: 130px;
   height: 130px;
   border-radius: 50%;
   border: 10px solid #fff;
@@ -2865,6 +2860,14 @@ button:hover {
     margin-bottom: 20px;
   }
 
+  .scheme__item::before {
+    left: 50% !important;
+    top: -10px !important;
+    -webkit-transform: rotate(225deg) skew(5deg) translateX(65%) !important;
+    -ms-transform: rotate(225deg) skew(5deg) translateX(65%) !important;
+    transform: rotate(225deg) skew(5deg) translateX(65%) !important;
+  }
+
   .scheme__item--you {
     display: none;
   }
@@ -3248,6 +3251,7 @@ button:hover {
   .scheme__icon {
     border-left: none;
     border-right: none;
+    width: 110px;
   }
 
   .scheme__text {
