@@ -1,23 +1,7 @@
 .feed-back {
   background-image: linear-gradient(141deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, .2));
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding: 50px 65px;
-
-  @include md-block() {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 40px 33px;
-  }
-  @include sm-block() {
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 19px;
-  }
-  @include xs-block() {
-    padding: 30px 20px;
-  }
 
   &--popup {
     background: #fff;
@@ -59,8 +43,8 @@
 
   &__headline {
     font-size: 32px;
-    font-family: "Open Sans";
-    font-weight: bold;
+    font-family: 'Open Sans';
+    font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 20px;
@@ -95,7 +79,7 @@
 
   &__choise {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 5px;
   }
 
@@ -116,6 +100,39 @@
     border: 0;
     border-radius: 3px;
     margin-bottom: 10px;
+
+    &--border {
+      border: 1px solid #cccccc;
+    }
+  }
+  @include placeholder-color(feed-back__input, $c-bg-gray);
+
+  &__btn {
+    width: 100%;
+    border: 1px solid #ff7e00;
+    padding: 14px;
+    line-height: 1;
+  }
+}
+
+.feed-back:not(.feed-back--popup) {
+  @include md-block() {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 33px;
+  }
+  @include sm-block() {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 19px;
+  }
+  @include xs-block() {
+    padding: 30px 20px;
+  }
+
+  &__input {
     @include md-block() {
       width: 30%;
       margin-right: 10px;
@@ -132,19 +149,9 @@
       margin-bottom: 10px;
       width: 100%;
     }
-
-    &--border {
-      border: 1px solid #cccccc;
-    }
   }
-  @include placeholder-color(feed-back__input, $c-bg-gray);
 
   &__btn {
-    width: 100%;
-    border: 1px solid #ff7e00;
-    padding: 14px;
-    line-height: 1;
-
     @include md-block() {
       width: 30%;
       padding: 14px 0;

@@ -948,7 +948,7 @@ button:hover {
 
 .feed-back {
   background-image: linear-gradient(141deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding: 50px 65px;
 }
 
@@ -998,8 +998,8 @@ button:hover {
 
 .feed-back__headline {
   font-size: 32px;
-  font-family: "Open Sans";
-  font-weight: bold;
+  font-family: 'Open Sans';
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 20px;
@@ -1018,7 +1018,7 @@ button:hover {
 
 .feed-back__choise {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 5px;
 }
 
@@ -2177,7 +2177,17 @@ button:hover {
     font-size: 16px;
   }
 
-  .feed-back {
+  .feed-back__headline {
+    width: 100%;
+    text-align: left;
+    font-size: 22px;
+  }
+
+  .feed-back__headline span {
+    display: inline;
+  }
+
+  .feed-back:not(.feed-back--popup) {
     width: 100%;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2191,17 +2201,7 @@ button:hover {
     padding: 40px 33px;
   }
 
-  .feed-back__headline {
-    width: 100%;
-    text-align: left;
-    font-size: 22px;
-  }
-
-  .feed-back__headline span {
-    display: inline;
-  }
-
-  .feed-back__input {
+  .feed-back:not(.feed-back--popup)__input {
     width: 30%;
     margin-right: 10px;
     -webkit-flex-grow: 1;
@@ -2210,7 +2210,7 @@ button:hover {
     margin-bottom: 0;
   }
 
-  .feed-back__btn {
+  .feed-back:not(.feed-back--popup)__btn {
     width: 30%;
     padding: 14px 0;
     -webkit-flex-grow: 1;
@@ -2764,13 +2764,13 @@ button:hover {
     font-size: 24px;
   }
 
-  .feed-back {
+  .feed-back:not(.feed-back--popup) {
     margin-left: 15px;
     margin-right: 15px;
     padding: 19px;
   }
 
-  .feed-back__input {
+  .feed-back:not(.feed-back--popup)__input {
     width: 197px;
     -webkit-flex-grow: 0;
     -ms-flex-positive: 0;
@@ -2779,7 +2779,7 @@ button:hover {
     margin-left: 0;
   }
 
-  .feed-back__btn {
+  .feed-back:not(.feed-back--popup)__btn {
     width: 100%;
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -3183,10 +3183,6 @@ button:hover {
     border-left-width: 0;
   }
 
-  .feed-back {
-    padding: 30px 20px;
-  }
-
   .feed-back__headline {
     font-size: 14px;
     text-align: center;
@@ -3196,12 +3192,16 @@ button:hover {
     font-size: 14px;
   }
 
-  .feed-back__input {
+  .feed-back:not(.feed-back--popup) {
+    padding: 30px 20px;
+  }
+
+  .feed-back:not(.feed-back--popup)__input {
     margin-bottom: 10px;
     width: 100%;
   }
 
-  .feed-back__btn {
+  .feed-back:not(.feed-back--popup)__btn {
     margin-top: 0;
   }
 
