@@ -149,6 +149,7 @@ button:hover {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  transition: width 0.3s ease;
   width: 1170px;
 }
 
