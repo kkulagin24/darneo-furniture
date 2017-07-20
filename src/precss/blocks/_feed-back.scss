@@ -2,6 +2,10 @@
   background-image: linear-gradient(141deg, rgba(255, 255, 255, .5), rgba(255, 255, 255, .2));
   border: 1px solid #fff;
   padding: 50px 65px;
+  @include xs-block() {
+    padding: 65px 12px 30px 23px;
+    max-width: 320px;
+  }
 
   &--popup {
     background: #fff;
@@ -25,11 +29,11 @@
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       height: 3px;
       width: 25px;
-      background-color: white;
+      background-color: #fff;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(-45deg);
@@ -49,26 +53,16 @@
     text-align: center;
     margin-bottom: 20px;
     line-height: 1;
-
-    @include md-block() {
-      width: 100%;
-      text-align: left;
-      font-size: 22px;
-    }
     @include xs-block() {
-      font-size: 14px;
-      text-align: center;
+      font-size: 24px;
     }
 
     span {
       line-height: 1;
       font-size: 22px;
       display: block;
-      @include md-block() {
-        display: inline;
-      }
       @include xs-block() {
-        font-size: 14px;
+        font-size: 18px;
       }
     }
   }
@@ -115,55 +109,79 @@
   }
 }
 
-.feed-back:not(.feed-back--popup) {
-  @include md-block() {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 40px 33px;
-  }
-  @include sm-block() {
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 19px;
-  }
-  @include xs-block() {
-    padding: 30px 20px;
-  }
+.feed-back {
 
-  &__input {
+  &.action__form {
     @include md-block() {
-      width: 30%;
-      margin-right: 10px;
-      flex-grow: 1;
-      margin-bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 40px 33px;
     }
     @include sm-block() {
-      width: 197px;
-      flex-grow: 0;
-      margin-right: 0;
-      margin-left: 0;
+      margin-left: 15px;
+      margin-right: 15px;
+      padding: 19px;
     }
     @include xs-block() {
-      margin-bottom: 10px;
-      width: 100%;
+      padding: 30px 20px;
     }
-  }
 
-  &__btn {
-    @include md-block() {
-      width: 30%;
-      padding: 14px 0;
-      flex-grow: 1;
+    .feed-back__headline {
+      @include md-block() {
+        width: 100%;
+        text-align: left;
+        font-size: 22px;
+      }
+      @include xs-block() {
+        font-size: 14px;
+        text-align: center;
+      }
+
+      span {
+        @include md-block() {
+          display: inline;
+        }
+        @include xs-block() {
+          font-size: 14px;
+        }
+      }
     }
-    @include sm-block() {
-      width: 100%;
-      flex-basis: 100%;
-      margin-top: 16px;
+
+    .feed-back__input {
+      @include md-block() {
+        width: 30%;
+        margin-right: 10px;
+        flex-grow: 1;
+        margin-bottom: 0;
+      }
+      @include sm-block() {
+        width: 197px;
+        flex-grow: 0;
+        margin-right: 0;
+        margin-left: 0;
+      }
+      @include xs-block() {
+        margin-bottom: 10px;
+        width: 100%;
+      }
     }
-    @include xs-block() {
-      margin-top: 0;
+
+    .feed-back__btn {
+      @include md-block() {
+        width: 30%;
+        padding: 14px 0;
+        flex-grow: 1;
+      }
+      @include sm-block() {
+        width: 100%;
+        flex-basis: 100%;
+        margin-top: 16px;
+      }
+      @include xs-block() {
+        margin-top: 0;
+      }
     }
   }
 }
