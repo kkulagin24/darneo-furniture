@@ -76,11 +76,11 @@ gulp.task('copyHtml', function() {
 
 
 gulp.task('watch', ['browserSync'], function() {
-gulp.watch([config.src + config.css.src], function(event, cb) {
-    	setTimeout(function(){
-          gulp.start('build');
-    	}, 500);
-});
+	gulp.watch([config.src + config.css.src], function(event, cb) {
+			setTimeout(function(){
+			  gulp.start('build');
+			}, 500);
+	});
 	// gulp.watch(config.src + config.css.src, ['build']);
 	gulp.watch(config.src + config.html.src, ['copyHtml']);
 });

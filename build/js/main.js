@@ -65,84 +65,47 @@ $(document).ready(function (e) {
         adaptiveHeight: true
     });
 
-    $('.timer--1').final_countdown({
-        start: Date.now() - 3600 * 24 * 7,
-        end: Date.now() + 3600 * 24 * 7,
-        now: Date.now(),
-        selectors: {
+    $('.timer').each(function () {
+        var id = $(this).attr('id');
+        $(this).final_countdown({
+            start: Date.now() - 3600 * 24 * 7,
+            end: Date.now() + 3600 * 24 * 7,
+            now: Date.now(),
+            selectors: {
 
-            value_seconds: '.timer--1 .clock-seconds .val',
+                value_seconds: '#' + id + '.timer .clock-seconds .val',
 
-            canvas_seconds: 'canvas-seconds',
+                canvas_seconds: id + '-canvas-seconds',
 
-            value_minutes: '.timer--1 .clock-minutes .val',
+                value_minutes: '#' + id + '.timer .clock-minutes .val',
 
-            canvas_minutes: 'canvas-minutes',
+                canvas_minutes: id + '-canvas-minutes',
 
-            value_hours: '.timer--1 .clock-hours .val',
+                value_hours: '#' + id + '.timer .clock-hours .val',
 
-            canvas_hours: 'canvas-hours',
+                canvas_hours: id + '-canvas-hours',
 
-            value_days: '.timer--1 .clock-days .val',
+                value_days: '#' + id + '.timer .clock-days .val',
 
-            canvas_days: 'canvas-days'
-        },
-        seconds: {
-            borderColor: '#01a5e6',
-            borderWidth: '4'
-        },
-        minutes: {
-            borderColor: '#01a5e6',
-            borderWidth: '4'
-        },
-        hours: {
-            borderColor: '#01a5e6',
-            borderWidth: '4'
-        },
-        days: {
-            borderColor: '#01a5e6',
-            borderWidth: '4'
-        }
-    });
-
-    $('.timer--2').final_countdown2({
-        start: Date.now() - 3600 * 24 * 7,
-        end: Date.now() + 3600 * 24 * 7,
-        now: Date.now(),
-        selectors: {
-
-            value_seconds: '.timer--2 .clock-seconds .val',
-
-            canvas_seconds: 'canvas-seconds-2',
-
-            value_minutes: '.timer--2 .clock-minutes .val',
-
-            canvas_minutes: 'canvas-minutes-2',
-
-            value_hours: '.timer--2 .clock-hours .val',
-
-            canvas_hours: 'canvas-hours-2',
-
-            value_days: '.timer--2 .clock-days .val',
-
-            canvas_days: 'canvas-days-2'
-        },
-        seconds: {
-            borderColor: '#01a5e6',
-            borderWidth: '4'
-        },
-        minutes: {
-            borderColor: '#01a5e6',
-            borderWidth: '4'
-        },
-        hours: {
-            borderColor: '#01a5e6',
-            borderWidth: '4'
-        },
-        days: {
-            borderColor: '#01a5e6',
-            borderWidth: '4'
-        }
+                canvas_days: id + '-canvas-days'
+            },
+            seconds: {
+                borderColor: '#01a5e6',
+                borderWidth: '4'
+            },
+            minutes: {
+                borderColor: '#01a5e6',
+                borderWidth: '4'
+            },
+            hours: {
+                borderColor: '#01a5e6',
+                borderWidth: '4'
+            },
+            days: {
+                borderColor: '#01a5e6',
+                borderWidth: '4'
+            }
+        });
     });
 });
 
